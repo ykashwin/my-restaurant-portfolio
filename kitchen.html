@@ -18,7 +18,6 @@
         .job-title { font-size: 1.4rem; color: #ffffff; font-weight: bold; margin: 0; }
         .company-date { font-size: 1rem; color: #d4af37; margin: 5px 0 15px 0; font-style: italic; }
         
-        /* Interactive Link styling for Taco Bell trigger */
         .company-link { color: #d4af37; text-decoration: none; font-weight: bold; cursor: pointer; }
         .company-link:hover { text-decoration: underline; color: #ffffff; }
         
@@ -27,29 +26,28 @@
         .cta-btn { display: inline-block; background: transparent; color: #d4af37; border: 2px solid #d4af37; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
         .cta-btn:hover { background: #d4af37; color: #121212; transform: translateY(-3px); }
 
-        /* --- INVERTED DIAMOND MODAL SYSTEM --- */
+        /* --- MODAL SYSTEM CONFIGURATION --- */
         .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.95); justify-content: center; align-items: center; z-index: 1000; }
-        .modal-box { background: #1c1c1c; border: 2px solid #d4af37; border-radius: 12px; width: 90%; max-width: 950px; padding: 40px; position: relative; box-shadow: 0 0 30px rgba(212, 175, 55, 0.2); }
+        .modal-box { background: #1c1c1c; border: 2px solid #d4af37; border-radius: 12px; width: 90%; max-width: 850px; padding: 40px; position: relative; box-shadow: 0 0 30px rgba(212, 175, 55, 0.2); }
         .close-modal { position: absolute; top: 15px; right: 25px; color: #d4af37; font-size: 35px; cursor: pointer; font-weight: bold; }
         .close-modal:hover { color: #fff; }
         
-        /* CSS Matrix Grid to achieve the Inverted Diamond shape */
+        /* Seamless 3x3 Grid with No Gaps */
+        .waga-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 20px; border: 1px solid #333; overflow: hidden; border-radius: 6px; }
+        .grid-item { width: 100%; aspect-ratio: 1 / 1; display: flex; justify-content: center; align-items: center; background: #121212; overflow: hidden; }
+        .grid-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+        .grid-item img:hover { transform: scale(1.05); }
+
+        /* --- TACO BELL MODAL SYSTEM --- */
         .diamond-matrix { display: flex; flex-direction: column; align-items: center; gap: 30px; margin-top: 30px; }
-        
-        /* Row 1: Three images in a straight line with clean gaps */
         .matrix-row-top { display: flex; gap: 40px; justify-content: center; align-items: center; width: 100%; }
-        
-        /* Row 2: Single item positioned centrally below row 1's middle item */
         .matrix-row-bottom { display: flex; justify-content: center; width: 100%; }
-        
-        /* Image container wrapping & scaling to keep shapes uniformed */
         .matrix-item { width: 220px; height: 220px; background: #121212; border: 1px solid #333; border-radius: 8px; overflow: hidden; display: flex; justify-content: center; align-items: center; padding: 5px; }
-        .matrix-item:hover { border-color: #d4af37; transform: scale(1.03); transition: all 0.3s ease; }
         .matrix-item img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 4px; }
     </style>
     <script>
-        function toggleTacoModal(show) {
-            document.getElementById('tacoBellModal').style.display = show ? 'flex' : 'none';
+        function toggleModal(modalId, show) {
+            document.getElementById(modalId).style.display = show ? 'flex' : 'none';
         }
     </script>
 </head>
@@ -89,7 +87,9 @@
 
             <div class="timeline-item">
                 <div class="job-title">Line Chef</div>
-                <div class="company-date">Wagamama</div>
+                <div class="company-date">
+                    <span class="company-link" onclick="toggleModal('wagamamaModal', true)">Wagamama ↗</span>
+                </div>
                 <div class="job-desc">
                     Mastered high-speed line operations, precision timing, and standardized station throughput matching strict recipe frameworks in a rapid service ecosystem.
                 </div>
@@ -98,7 +98,7 @@
             <div class="timeline-item">
                 <div class="job-title">Kitchen Staff</div>
                 <div class="company-date">
-                    <span class="company-link" onclick="toggleTacoModal(true)">Taco Bell ↗</span>
+                    <span class="company-link" onclick="toggleModal('tacoBellModal', true)">Taco Bell ↗</span>
                 </div>
                 <div class="job-desc">
                     Maintained core supply flow, supported rapid assembly logistics, and built foundational knowledge of cross-functional team synchronization under high-velocity turnaround requirements.
@@ -112,31 +112,38 @@
         </div>
     </main>
 
-    <div id="tacoBellModal" class="modal-overlay" onclick="toggleTacoModal(false)">
+    <div id="wagamamaModal" class="modal-overlay" onclick="toggleModal('wagamamaModal', false)">
         <div class="modal-box" onclick="event.stopPropagation()">
-            <span class="close-modal" onclick="toggleTacoModal(false)">&times;</span>
-            <h2 style="color: #d4af37; margin-top: 0; text-align: center; letter-spacing: 2px; font-size: 1.6rem;">TACO BELL GALERIA</h2>
+            <span class="close-modal" onclick="toggleModal('wagamamaModal', false)">&times;</span>
+            <h2 style="color: #d4af37; margin-top: 0; text-align: center; letter-spacing: 2px; font-size: 1.6rem;">WAGAMAMA MASTER GRID</h2>
             
-            <div class="diamond-matrix">
+            <div class="waga-grid">
+                <div class="grid-item"><img src="Dunbouri.jpg" alt="Dunbouri"></div>
+                <div class="grid-item"><img src="Wagamama.png" alt="Wagamama Main"></div> <div class="grid-item"><img src="Firecracker.jpg" alt="Firecracker"></div>
                 
-                <div class="matrix-row-top">
-                    <div class="matrix-item">
-                        <img src="Tacobell.jpg" alt="Taco Bell Asset 1">
-                    </div>
-                    <div class="matrix-item">
-                        <img src="tacobellicon.png" alt="Taco Bell Brand Icon">
-                    </div>
-                    <div class="matrix-item">
-                        <img src="Tacobell2.jpg" alt="Taco Bell Asset 2">
-                    </div>
-                </div>
+                <div class="grid-item"><img src="Katsu.jpg" alt="Katsu"></div>
+                <div class="grid-item"><img src="Wagamama_work.PNG" alt="Wagamama Work"></div> <div class="grid-item"><img src="Momo.jpg" alt="Momo"></div>
                 
-                <div class="matrix-row-bottom">
-                    <div class="matrix-item">
-                        <img src="Tacobell3.jpg" alt="Taco Bell Asset 3 Below Icon">
-                    </div>
-                </div>
+                <div class="grid-item"><img src="Ramen.jpg" alt="Ramen"></div>
+                <div class="grid-item"><img src="Squid.jpg" alt="Squid"></div>
+                <div class="grid-item"><img src="meemory.PNG" alt="Memory Log"></div>
+            </div>
+        </div>
+    </div>
 
+    <div id="tacoBellModal" class="modal-overlay" onclick="toggleModal('tacoBellModal', false)">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <span class="close-modal" onclick="toggleModal('tacoBellModal', false)">&times;</span>
+            <h2 style="color: #d4af37; margin-top: 0; text-align: center; letter-spacing: 2px; font-size: 1.6rem;">TACO BELL GALERIA</h2>
+            <div class="diamond-matrix">
+                <div class="matrix-row-top">
+                    <div class="matrix-item"><img src="Tacobell.jpg" alt="Taco Bell 1"></div>
+                    <div class="matrix-item"><img src="tacobellicon.png" alt="Taco Bell Icon"></div>
+                    <div class="matrix-item"><img src="Tacobell2.jpg" alt="Taco Bell 2"></div>
+                </div>
+                <div class="matrix-row-bottom">
+                    <div class="matrix-item"><img src="Tacobell3.jpg" alt="Taco Bell 3"></div>
+                </div>
             </div>
         </div>
     </div>
