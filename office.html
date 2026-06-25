@@ -2,50 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>The Back Office - Experience & Credentials</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Office - Technical Portfolio</title>
     <style>
-        body { font-family: 'Arial', sans-serif; background-color: #111; color: #fff; padding: 20px; line-height: 1.6; }
-        .room-box { max-width: 800px; margin: 0 auto; background: #222; padding: 30px; border-radius: 8px; border: 2px solid #003366; }
-        .segment { background: #2a2a2a; padding: 15px; margin: 15px 0; border-left: 5px solid #004d99; }
-        .btn-back { display: inline-block; margin-top: 30px; padding: 10px 20px; background: #cc0000; color: white; text-decoration: none; font-weight: bold; border-radius: 5px; }
-        .document-link { color: #33ff33; font-weight: bold; text-decoration: none; }
+        body {
+            margin: 0;
+            padding: 0;
+            background: #121212;
+            color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-links a {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .nav-links a:hover {
+            color: #ffffff;
+            border-bottom: 2px solid #d4af37;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #d4af37;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #cccccc;
+            margin-bottom: 40px;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: transparent;
+            color: #d4af37;
+            border: 2px solid #d4af37;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .cta-btn:hover {
+            background: #d4af37;
+            color: #121212;
+            transform: translateY(-3px);
+        }
     </style>
 </head>
 <body>
 
-    <div class="room-box">
-        <h1>📁 Welcome to the Back Office</h1>
-        <p>Here is where all my corporate data lives.</p>
-
-        <!-- Segment 1: Mindtree -->
-        <div class="segment">
-            <h3>Project Lead – Mindtree</h3>
-            <p>Managed technical teams and cloud migrations.</p>
-            <p>🔗 <a class="document-link" href="Mindtree_Offer.pdf" target="_blank">Click to view My Joining Letter</a></p>
-            <p>🔗 <a class="document-link" href="Mindtree_Reliving.pdf" target="_blank">Click to view My Relieving Letter</a></p>
+    <!-- Global Header & Navigation -->
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="The Rare Analyst Logo" style="height: 50px;">
         </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About us</a></li>
+                <li><a href="Service.html">Service</a></li>
+                <li><a href="Contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- Segment 2: Deloitte -->
-        <div class="segment">
-            <h3>Senior Analyst – Deloitte</h3>
-            <p>Monitored global metrics and won Wall of Fame awards[cite: 2].</p>
-            <p>🔗 <a class="document-link" href="#" target="_blank">Click to view My Joining Letter</a></p>
-            <p>🔗 <a class="document-link" href="#" target="_blank">Click to view My Relieving Letter</a></p>
-        </div>
-
-        <!-- THE SECRET TRAPDOOR TARGET FOR EDUCATION -->
-        <div id="education" class="segment" style="border-left-color: #ff9900;">
-            <h2>📦 The Storage & Training Area (Education)</h2>
-            <h3>MSc in Business Analytics - University of Exeter</h3>
-            <p>Mastered data modeling, SQL, and Power BI dashboarding[cite: 2].</p>
-            <p>🔗 <a class="document-link" href="Exeter.Report.pdf" target="_blank">Click to view My Final Degree Certificate</a></p>
-        </div>
-
-        <!-- UNIVERSAL NAVIGATION BACK TO MAIN SCREEN -->
-        <center>
-            <a href="index.html" class="btn-back">⬅️ Walk Back to Dining Room Menu</a>
-        </center>
-    </div>
+    <!-- Main Content Container -->
+    <main class="container">
+        <h1>THE OFFICE: ENTERPRISE DATA & CLOUD</h1>
+        <p>
+            Where corporate data meets execution strategy. Backed by an MSc in Business Analytics from the University of Exeter and extensive tech consulting history, this is the command center for data integrity, cloud architecture transformation, and business intelligence pipelines.
+        </p>
+        
+        <!-- Interactive Call to Action routing directly to your services menu -->
+        <a href="Service.html" class="cta-btn">View Menu of Services</a>
+    </main>
 
 </body>
 </html>
