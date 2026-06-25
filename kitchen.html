@@ -28,13 +28,13 @@
 
         /* --- MODAL SYSTEM CONFIGURATION --- */
         .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.95); justify-content: center; align-items: center; z-index: 1000; }
-        .modal-box { background: #1c1c1c; border: 2px solid #d4af37; border-radius: 12px; width: 90%; max-width: 850px; padding: 40px; position: relative; box-shadow: 0 0 30px rgba(212, 175, 55, 0.2); }
+        .modal-box { background: #1c1c1c; border: 2px solid #d4af37; border-radius: 12px; width: 90%; max-width: 650px; padding: 40px; position: relative; box-shadow: 0 0 30px rgba(212, 175, 55, 0.2); }
         .close-modal { position: absolute; top: 15px; right: 25px; color: #d4af37; font-size: 35px; cursor: pointer; font-weight: bold; }
         .close-modal:hover { color: #fff; }
         
-        /* Seamless 3x3 Grid with No Gaps */
-        .waga-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 20px; border: 1px solid #333; overflow: hidden; border-radius: 6px; }
-        .grid-item { width: 100%; aspect-ratio: 1 / 1; display: flex; justify-content: center; align-items: center; background: #121212; overflow: hidden; }
+        /* Balanced 4x2 Seamless Grid Matrix */
+        .waga-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; margin-top: 20px; border: 1px solid #333; overflow: hidden; border-radius: 6px; }
+        .grid-item { width: 100%; aspect-ratio: 1.2 / 1; display: flex; justify-content: center; align-items: center; background: #121212; overflow: hidden; }
         .grid-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
         .grid-item img:hover { transform: scale(1.05); }
 
@@ -120,13 +120,11 @@
             <div class="waga-grid">
                 <div class="grid-item"><img src="Dunbouri.jpg" alt="Dunbouri"></div>
                 <div class="grid-item"><img src="Wagamama.png" alt="Wagamama Main"></div> <div class="grid-item"><img src="Firecracker.jpg" alt="Firecracker"></div>
-                
-                <div class="grid-item"><img src="Katsu.jpg" alt="Katsu"></div>
-                <div class="grid-item"><img src="Wagamama_work.PNG" alt="Wagamama Work"></div> <div class="grid-item"><img src="Momo.jpg" alt="Momo"></div>
+                <div class="grid-item"><img src="Wagamama_work.PNG" alt="Wagamama Work"></div> <div class="grid-item"><img src="Katsu.jpg" alt="Katsu"></div>
+                <div class="grid-item"><img src="Momo.jpg" alt="Momo"></div>
                 
                 <div class="grid-item"><img src="Ramen.jpg" alt="Ramen"></div>
                 <div class="grid-item"><img src="Squid.jpg" alt="Squid"></div>
-                <div class="grid-item"><img src="meemory.PNG" alt="Memory Log"></div>
             </div>
         </div>
     </div>
