@@ -2,45 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ashwin Yadhav Kumar - Interactive Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rare Analyst RESTAURANT - Home</title>
     <style>
-        body { font-family: 'Arial', sans-serif; background-color: #111; color: #fff; text-align: center; padding: 20px; }
-        .restaurant-container { max-width: 900px; margin: 0 auto; border: 2px solid #333; padding: 30px; background-color: #1a1a1a; }
-        .photo-gallery { display: flex; justify-content: space-around; margin: 20px 0; }
-        .photo-slot { width: 200px; height: 150px; border: 2px dashed #666; display: flex; align-items: center; justify-content: center; background: #2a2a2a; color: #aaa; }
-        .menu-segment { display: block; width: 80%; margin: 15px auto; padding: 20px; background: #003366; color: #fff; text-decoration: none; font-size: 1.2rem; font-weight: bold; border-radius: 5px; transition: 0.3s; }
-        .menu-segment:hover { background: #004d99; transform: scale(1.02); }
+        /* A sleek, dark theme styling matching your images */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #121212;
+            color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links a {
+            color: #d4af37; /* Elegant gold tone */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #ffffff;
+            border-bottom: 2px solid #d4af37;
+        }
+        .hub-container {
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .split-hub-options {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        .hub-card {
+            background: #1c1c1c;
+            border: 1px solid #d4af37;
+            padding: 40px;
+            width: 300px;
+            text-decoration: none;
+            color: #ffffff;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .hub-card:hover {
+            transform: translateY(-10px);
+            background: #262626;
+        }
+        .hub-card h2 {
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
 
-    <div class="restaurant-container">
-        <h1>Welcome to the Dining Room</h1>
-        <p><i>"Helping organizations work smarter while convincing stakeholders that change was their idea all along."</i></p>
-
-        <!-- Main page photo slots -->
-        <div class="photo-gallery">
-            <div class="photo-slot">[ Main Photo Slot 1 ]</div>
-            <div class="photo-slot">[ Main Photo Slot 2 ]</div>
-            <div class="photo-slot">[ Main Photo Slot 3 ]</div>
+    <!-- Global Header & Navigation -->
+    <header>
+        <div class="logo-container">
+            <!-- This points to the logo you uploaded to your repository -->
+            <img src="logo.png" alt="The Rare Analyst Logo" style="height: 50px;">
         </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="About.html">About us</a></li>
+                <li><a href="Service.html">Service</a></li>
+                <li><a href="Contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <hr style="border-color: #333;">
-        <h2>The Career Menu (Click a Segment to Walk Through)</h2>
-
-        <!-- Segmented Links acting as doorways -->
-        <a href="office.html" class="menu-segment">
-            1. Corporate Experience (Deloitte & Mindtree) → Walk to the Office
-        </a>
-        
-        <a href="office.html#education" class="menu-segment">
-            2. Academic Credentials (MSc Business Analytics) → Walk to Storage & Training
-        </a>
-
-        <a href="kitchen.html" class="menu-segment">
-            3. Operational Leadership Sabbatical → Walk to the Kitchen
-        </a>
-    </div>
+    <!-- Main Content Container -->
+    <main class="hub-container">
+        <h1>CHOOSE YOUR DECK</h1>
+        <div class="split-hub-options">
+            <a href="office.html" class="hub-card">
+                <h2>THE OFFICE</h2>
+                <p>Explore Data Analytics, Cloud Transformation, and Enterprise Architecture.</p>
+            </a>
+            <a href="kitchen.html" class="hub-card">
+                <h2>THE KITCHEN</h2>
+                <p>Explore High-Velocity Operations, Crisis Management, and Resource Scaling.</p>
+            </a>
+        </div>
+    </main>
 
 </body>
 </html>
