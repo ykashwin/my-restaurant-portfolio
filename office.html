@@ -17,12 +17,20 @@
         .edu-title { font-size: 1.4rem; color: #ffffff; font-weight: bold; margin: 0; }
         .edu-institution { font-size: 1.1rem; color: #d4af37; margin: 5px 0 15px 0; }
         .edu-desc { color: #cccccc; line-height: 1.6; font-size: 1.05rem; }
-        .cert-link { display: inline-block; margin-top: 15px; color: #d4af37; text-decoration: none; font-weight: bold; }
+        .cert-link { display: inline-block; margin-top: 15px; color: #d4af37; text-decoration: none; font-weight: bold; cursor: pointer; }
         .cert-link:hover { text-decoration: underline; color: #ffffff; }
         .cta-container { text-align: center; margin-top: 50px; }
         .cta-btn { display: inline-block; background: transparent; color: #d4af37; border: 2px solid #d4af37; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
         .cta-btn:hover { background: #d4af37; color: #121212; transform: translateY(-3px); }
     </style>
+    <script>
+        // Custom trigger function to open both publisher URLs simultaneously
+        function openDoublePublication(event) {
+            event.preventDefault();
+            window.open("https://www.e-elgar.com/shop/gbp/forecasting-planning-and-strategy-in-a-turbulent-era-9781035317233.html", "_blank");
+            window.open("https://www.elgaronline.com/edcollchap/book/9781035317240/chapter7.xml", "_blank");
+        }
+    </script>
 </head>
 <body>
 
@@ -48,16 +56,17 @@
             <p class="edu-desc">
                 Advanced postgraduate specialization focusing on data-driven decision making, predictive modeling, and business intelligence architectures to transform complex data infrastructure into operational strategy.
             </p>
-            <a href="#" class="cert-link">Published research: “Strategies for Pharmaceutical Resilience” (Edward Elgar Publishing Ltd) </a>
+            <!-- Clicking this triggers the custom JavaScript function above -->
+            <a href="#" onclick="openDoublePublication(event)" class="cert-link">Published research: “Strategies for Pharmaceutical Resilience” (Edward Elgar Publishing Ltd)</a>
         </div>
 
         <div class="edu-card">
             <div class="edu-title">Bachelor of Technology in Information Technology</div>
-            <div class="edu-institution">Swami Vivekananda Institute of Technology {affiliated JNTU, Hyderabad}</div>
+            <div class="edu-institution">Swami Vivekanada Institute of Technology {affiliated to JNTU, Hyderabad}</div>
             <p class="edu-desc">
                 Core foundational engineering degree covering systems architecture, database management, cloud computing concepts, and algorithmic problem-solving.
             </p>
-            
+            <a href="#" class="cert-link">→ View All Technical Certifications & Credentials</a>
         </div>
 
         <div class="cta-container">
