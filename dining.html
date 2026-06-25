@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dining - Corporate Experience</title>
+    <style>
+        body { margin: 0; padding: 0; background: #121212; color: #f5f5f5; font-family: 'Segoe UI', sans-serif; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: rgba(0,0,0,0.8); }
+        .nav-links { list-style: none; display: flex; gap: 30px; padding: 0; margin: 0; }
+        .nav-links a { color: #d4af37; text-decoration: none; font-weight: bold; font-size: 18px; }
+        .nav-links a:hover { color: #ffffff; border-bottom: 2px solid #d4af37; }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+        h1 { color: #d4af37; text-align: center; margin-bottom: 40px; font-size: 2.5rem; letter-spacing: 2px; }
+        .timeline { border-left: 2px solid #d4af37; padding-left: 20px; margin-left: 20px; }
+        .timeline-item { margin-bottom: 40px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -27px; top: 5px; width: 12px; height: 12px; background: #d4af37; border-radius: 50%; }
+        .job-title { font-size: 1.4rem; color: #ffffff; font-weight: bold; margin: 0; }
+        .company-date { font-size: 1rem; color: #d4af37; margin: 5px 0 15px 0; font-style: italic; }
+        .job-desc { color: #cccccc; line-height: 1.6; font-size: 1.05rem; }
+        .cta-container { text-align: center; margin-top: 50px; }
+        .cta-btn { display: inline-block; background: transparent; color: #d4af37; border: 2px solid #d4af37; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
+        .cta-btn:hover { background: #d4af37; color: #121212; transform: translateY(-3px); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container"><img src="logo.png" alt="Logo" style="height: 50px;"></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About us</a></li>
+                <li><a href="Service.html">Service</a></li>
+                <li><a href="Contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>THE DINING: CORPORATE JOURNEY</h1>
+        <div class="timeline">
+
+            <!-- Mindtree Milestone -->
+            <div class="timeline-item">
+                <div class="job-title">Project Manager / Technical Leader</div>
+                <div class="company-date">Mindtree | February 2022 — September 2022</div>
+                <div class="job-desc">
+                    Spearheaded enterprise infrastructure modernization, successfully managing a high-impact Microsoft Intune implementation project. Aligned cross-functional tech teams to ensure secure, scalable endpoint deployment across the ecosystem.
+                </div>
+            </div>
+
+            <!-- Deloitte Milestone -->
+            <div class="timeline-item">
+                <div class="job-title">Senior Analyst — Technology Consulting</div>
+                <div class="company-date">Deloitte | October 2014 — February 2022</div>
+                <div class="job-desc">
+                    Architected enterprise modernization strategies and steered major cloud transformation initiatives. Partnered with corporate leadership to replace legacy friction with efficient, automated workflows and robust data governance frameworks.
+                </div>
+            </div>
+
+            <!-- IBM Milestone -->
+            <div class="timeline-item">
+                <div class="job-title">System Engineer / Enterprise Consultant</div>
+                <div class="company-date">IBM | October 2012 — October 2014</div>
+                <div class="job-desc">
+                    Engineered backend technical solutions, optimized system infrastructure, and supported critical data delivery frameworks to ensure peak operational reliability for global enterprise architectures.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cta-container">
+            <a href="Service.html" class="cta-btn">View Menu of Services</a>
+        </div>
+    </main>
+
+</body>
+</html>
