@@ -3,83 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Office - Technical Portfolio</title>
+    <title>The Office - Academic Background</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: #121212;
-            color: #f5f5f5;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background: rgba(0, 0, 0, 0.8);
-        }
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-            padding: 0;
-            margin: 0;
-        }
-        .nav-links a {
-            color: #d4af37;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        .nav-links a:hover {
-            color: #ffffff;
-            border-bottom: 2px solid #d4af37;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        h1 {
-            color: #d4af37;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
-        }
-        p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #cccccc;
-            margin-bottom: 40px;
-        }
-        .cta-btn {
-            display: inline-block;
-            background: transparent;
-            color: #d4af37;
-            border: 2px solid #d4af37;
-            padding: 12px 30px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-        .cta-btn:hover {
-            background: #d4af37;
-            color: #121212;
-            transform: translateY(-3px);
-        }
+        body { margin: 0; padding: 0; background: #121212; color: #f5f5f5; font-family: 'Segoe UI', sans-serif; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: rgba(0,0,0,0.8); }
+        .nav-links { list-style: none; display: flex; gap: 30px; padding: 0; margin: 0; }
+        .nav-links a { color: #d4af37; text-decoration: none; font-weight: bold; font-size: 18px; }
+        .nav-links a:hover { color: #ffffff; border-bottom: 2px solid #d4af37; }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; text-align: center; }
+        h1 { color: #d4af37; font-size: 2.5rem; margin-bottom: 10px; letter-spacing: 2px; }
+        .establishment-tag { color: #888; font-style: italic; font-size: 1.1rem; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 3px; }
+        .edu-card { background: #1c1c1c; border: 1px solid #d4af37; padding: 30px; border-radius: 8px; text-align: left; margin-bottom: 30px; }
+        .edu-title { font-size: 1.4rem; color: #ffffff; font-weight: bold; margin: 0; }
+        .edu-institution { font-size: 1.1rem; color: #d4af37; margin: 5px 0 15px 0; }
+        .edu-desc { color: #cccccc; line-height: 1.6; font-size: 1.05rem; }
+        .cert-link { display: inline-block; margin-top: 15px; color: #d4af37; text-decoration: none; font-weight: bold; }
+        .cert-link:hover { text-decoration: underline; color: #ffffff; }
+        .cta-container { text-align: center; margin-top: 50px; }
+        .cta-btn { display: inline-block; background: transparent; color: #d4af37; border: 2px solid #d4af37; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
+        .cta-btn:hover { background: #d4af37; color: #121212; transform: translateY(-3px); }
     </style>
 </head>
 <body>
 
-    <!-- Global Header & Navigation -->
     <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="The Rare Analyst Logo" style="height: 50px;">
-        </div>
+        <div class="logo-container"><img src="logo.png" alt="Logo" style="height: 50px;"></div>
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -90,15 +38,30 @@
         </nav>
     </header>
 
-    <!-- Main Content Container -->
     <main class="container">
-        <h1>THE OFFICE: ENTERPRISE DATA & CLOUD</h1>
-        <p>
-            Where corporate data meets execution strategy. Backed by an MSc in Business Analytics from the University of Exeter and extensive tech consulting history, this is the command center for data integrity, cloud architecture transformation, and business intelligence pipelines.
-        </p>
+        <h1>THE OFFICE: ACADEMIA & CREDENTIALS</h1>
+        <div class="establishment-tag">Elite</div>
         
-        <!-- Interactive Call to Action routing directly to your services menu -->
-        <a href="Service.html" class="cta-btn">View Menu of Services</a>
+        <div class="edu-card">
+            <div class="edu-title">Master of Science in Business Analytics</div>
+            <div class="edu-institution">University of Exeter</div>
+            <p class="edu-desc">
+                Advanced postgraduate specialization focusing on data-driven decision making, predictive modeling, and business intelligence architectures to transform complex data infrastructure into operational strategy.
+            </p>
+        </div>
+
+        <div class="edu-card">
+            <div class="edu-title">Bachelor of Technology in Information Technology</div>
+            <div class="edu-institution">Professional Engineering Credentials</div>
+            <p class="edu-desc">
+                Core foundational engineering degree covering systems architecture, database management, cloud computing concepts, and algorithmic problem-solving.
+            </p>
+            <a href="#" class="cert-link">→ View All Technical Certifications & Credentials</a>
+        </div>
+
+        <div class="cta-container">
+            <a href="index.html" class="cta-btn">Return to Home</a>
+        </div>
     </main>
 
 </body>
