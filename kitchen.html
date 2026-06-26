@@ -32,7 +32,7 @@
         .close-modal { position: absolute; top: 15px; right: 25px; color: #d4af37; font-size: 35px; cursor: pointer; font-weight: bold; z-index: 1010; }
         .close-modal:hover { color: #fff; }
 
-        /* --- COLLAGE DISPLAY FRAME WORK --- */
+        /* --- UNIFIED IMAGE DISPLAY FRAMEWORK --- */
         .collage-display-wrapper { width: 100%; margin-top: 20px; border-radius: 8px; overflow: hidden; border: 1px solid #333; background: #121212; cursor: pointer; box-shadow: 0 8px 25px rgba(0,0,0,0.5); }
         .collage-display-wrapper:hover { border-color: #d4af37; transform: scale(1.01); transition: all 0.3s ease; }
         .collage-display-wrapper img { width: 100%; height: auto; display: block; object-fit: contain; }
@@ -41,13 +41,6 @@
         .lightbox-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.98); justify-content: center; align-items: center; z-index: 2000; }
         .lightbox-content { max-width: 95%; max-height: 90vh; border: 2px solid #d4af37; border-radius: 6px; box-shadow: 0 0 40px rgba(212,175,55,0.4); }
         .close-lightbox { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 40px; cursor: pointer; font-weight: bold; }
-
-        /* --- TACO BELL MODAL SYSTEM --- */
-        .diamond-matrix { display: flex; flex-direction: column; align-items: center; gap: 30px; margin-top: 30px; }
-        .matrix-row-top { display: flex; gap: 40px; justify-content: center; align-items: center; width: 100%; }
-        .matrix-row-bottom { display: flex; justify-content: center; width: 100%; }
-        .matrix-item { width: 220px; height: 220px; background: #121212; border: 1px solid #333; border-radius: 8px; overflow: hidden; display: flex; justify-content: center; align-items: center; padding: 5px; }
-        .matrix-item img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 4px; }
     </style>
     <script>
         function toggleModal(modalId, show) {
@@ -131,7 +124,6 @@
         <div class="modal-box" onclick="event.stopPropagation()">
             <span class="close-modal" onclick="toggleModal('wagamamaModal', false)">&times;</span>
             <h2 style="color: #d4af37; margin: 0 0 10px 0; text-align: center; letter-spacing: 2px; font-size: 1.4rem;">WAGAMAMA MEMORIES & SHOWCASE</h2>
-            
             <div class="collage-display-wrapper" onclick="magnifyImage('Wagamama.PNG')">
                 <img src="Wagamama.PNG" alt="Wagamama Combined Showcase Canvas">
             </div>
@@ -141,16 +133,10 @@
     <div id="tacoBellModal" class="modal-overlay" onclick="toggleModal('tacoBellModal', false)">
         <div class="modal-box" onclick="event.stopPropagation()">
             <span class="close-modal" onclick="toggleModal('tacoBellModal', false)">&times;</span>
-            <h2 style="color: #d4af37; margin-top: 0; text-align: center; letter-spacing: 2px; font-size: 1.6rem;">TACO BELL GALERIA</h2>
-            <div class="diamond-matrix">
-                <div class="matrix-row-top">
-                    <div class="matrix-item"><img src="Tacobell.jpg" alt="Taco Bell Plate"></div>
-                    <div class="matrix-item"><img src="tacobellicon.png" alt="Taco Bell Crest"></div>
-                    <div class="matrix-item"><img src="Tacobell2.jpg" alt="Taco Bell Assembly"></div>
-                </div>
-                <div class="matrix-row-bottom">
-                    <div class="matrix-item"><img src="Tacobell3.jpg" alt="Taco Bell Spread"></div>
-                </div>
+            <h2 style="color: #d4af37; margin: 0 0 10px 0; text-align: center; letter-spacing: 2px; font-size: 1.4rem;">TACO BELL GALERIA</h2>
+            
+            <div class="collage-display-wrapper" onclick="magnifyImage('Taco.png')">
+                <img src="Taco.png" alt="Taco Bell Presentation Asset">
             </div>
         </div>
     </div>
