@@ -3,53 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Core Capabilities - The Rare Analyst</title>
+    <title>Our Services</title>
     <style>
-        body { margin: 0; padding: 0; background: #121212; color: #f5f5f5; font-family: 'Segoe UI', sans-serif; }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: rgba(0,0,0,0.8); }
+        body { 
+            margin: 0; 
+            padding: 0; 
+            background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), url('Background.png'); 
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            background-repeat: no-repeat;
+            color: #f5f5f5; 
+            font-family: 'Segoe UI', sans-serif; 
+        }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: rgba(0,0,0,0.85); border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
         .nav-links { list-style: none; display: flex; gap: 30px; padding: 0; margin: 0; }
         .nav-links a { color: #d4af37; text-decoration: none; font-weight: bold; font-size: 18px; }
-        .nav-links a:hover, .nav-links a.active { color: #ffffff; border-bottom: 2px solid #d4af37; }
-        .services-wrapper { max-width: 1200px; margin: 0 auto; padding: 60px 20px; text-align: center; }
-        .services-hero-header h1 { color: #d4af37; font-size: 2.5rem; letter-spacing: 2px; margin-bottom: 10px; }
-        .appetizing-tagline { font-style: italic; color: #cccccc; font-size: 1.2rem; margin-bottom: 50px; }
-        .services-grid { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
-        .service-card { background: #1c1c1c; border: 1px solid #d4af37; border-radius: 8px; padding: 25px; width: 320px; text-align: left; }
-        .service-card h3 { color: #d4af37; font-size: 1.1rem; margin-top: 0; min-height: 50px; }
-        .service-card p { color: #cccccc; font-size: 0.95rem; line-height: 1.6; }
+        .nav-links a:hover { color: #ffffff; border-bottom: 2px solid #d4af37; }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; text-align: center; }
+        h1 { color: #d4af37; font-size: 2.5rem; margin-bottom: 40px; letter-spacing: 2px; }
+        .service-card { background: rgba(28, 28, 28, 0.9); border: 1px solid #d4af37; padding: 30px; border-radius: 8px; text-align: left; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .service-title { font-size: 1.4rem; color: #ffffff; font-weight: bold; margin-bottom: 10px; }
+        .service-desc { color: #cccccc; line-height: 1.6; font-size: 1.05rem; }
+        .cta-container { text-align: center; margin-top: 50px; }
+        .cta-btn { display: inline-block; background: transparent; color: #d4af37; border: 2px solid #d4af37; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
+        .cta-btn:hover { background: #d4af37; color: #121212; transform: translateY(-3px); }
     </style>
 </head>
 <body>
+
     <header>
         <div class="logo-container"><img src="logo.png" alt="Logo" style="height: 50px;"></div>
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="About.html">About us</a></li>
-                <li><a href="Service.html" class="active">Service</a></li>
+                <li><a href="Service.html">Service</a></li>
                 <li><a href="Contact.html">Contact us</a></li>
             </ul>
         </nav>
     </header>
-    <main class="services-wrapper">
-        <header class="services-hero-header">
-            <h1>CORE CAPABILITIES</h1>
-            <p class="appetizing-tagline">Engineered to order. Scaled for pressure. Served with absolute data integrity.</p>
-        </header>
-        <section class="services-grid">
-            <div class="service-card">
-                <h3>ENTERPRISE WORKFLOW AUTOMATION & DATA CLEAN-UP</h3>
-                <p>I take messy, disorganized data architectures and transform them into streamlined, automated pipelines using SQL, Python, and cloud infrastructure. I fix backend bottlenecks so business intelligence engines run at peak performance.</p>
-            </div>
-            <div class="service-card">
-                <h3>STRATEGIC GOVERNANCE & POLICY MODELING</h3>
-                <p>I design operational frameworks and management policies that keep cross-functional teams aligned. I don't just build technology; I build the management rules and structures that ensure the entire operation runs predictably.</p>
-            </div>
-            <div class="service-card">
-                <h3>HIGH-PRESSURE CRISIS MANAGEMENT & CONFLICT RESOLUTION</h3>
-                <p>Forged in the literal fires of high-volume commercial kitchens, I specialize in navigating extreme operational friction. Whether it is an infrastructure crash or a team misalignment, I step into the chaos, resolve conflict, and engineer immediate solutions to protect execution.</p>
-            </div>
-        </section>
+
+    <main class="container">
+        <h1>PROFESSIONAL ARCHITECTURE SERVICES</h1>
+        
+        <div class="service-card">
+            <div class="service-title">Enterprise Business Analytics Consulting</div>
+            <div class="service-desc">Transforming complex, disparate data silos into highly structured mathematical models to optimize corporate capacity, predict customer demand curves, and streamline resource deployment channels.</div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-title">Cloud Infrastructure Systems Engineering</div>
+            <div class="service-desc">Architecting automated modern device environments, cloud endpoints, secure identity control tracking platforms, and high-velocity workflow webhooks to bypass human workflow bottlenecks.</div>
+        </div>
+
+        <div class="cta-container">
+            <a href="Open_page.html" class="cta-btn">Return to Main</a>
+        </div>
     </main>
+
 </body>
 </html>
