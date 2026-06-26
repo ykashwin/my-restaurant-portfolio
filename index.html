@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Office - Academic Background</title>
+    <title>The Main Hub - Portfolio</title>
     <style>
         body { 
             margin: 0; 
@@ -20,44 +20,18 @@
         .nav-links { list-style: none; display: flex; gap: 30px; padding: 0; margin: 0; }
         .nav-links a { color: #d4af37; text-decoration: none; font-weight: bold; font-size: 18px; }
         .nav-links a:hover { color: #ffffff; border-bottom: 2px solid #d4af37; }
-        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; text-align: center; }
-        h1 { color: #d4af37; font-size: 2.5rem; margin-bottom: 10px; letter-spacing: 2px; }
-        .establishment-tag { color: #888; font-style: italic; font-size: 1.1rem; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 3px; }
-        .edu-card { background: rgba(28, 28, 28, 0.9); border: 1px solid #d4af37; padding: 30px; border-radius: 8px; text-align: left; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-        .edu-title { font-size: 1.4rem; color: #ffffff; font-weight: bold; margin: 0; }
-        .edu-institution { font-size: 1.1rem; color: #d4af37; margin: 5px 0 15px 0; }
-        .edu-desc { color: #cccccc; line-height: 1.6; font-size: 1.05rem; }
-        .cert-link { display: inline-block; margin-top: 15px; color: #d4af37; text-decoration: none; font-weight: bold; cursor: pointer; }
-        .cert-link:hover { text-decoration: underline; color: #ffffff; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 80px 20px; text-align: center; }
+        h1 { color: #d4af37; font-size: 3rem; margin-bottom: 20px; letter-spacing: 3px; }
+        p { font-size: 1.2rem; color: #cccccc; margin-bottom: 50px; }
+        .hub-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 20px; }
+        .hub-card { background: rgba(28, 28, 28, 0.9); border: 1px solid #d4af37; padding: 30px; border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .hub-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2); border-color: #ffffff; }
+        .card-title { font-size: 1.5rem; color: #d4af37; font-weight: bold; margin-bottom: 15px; }
+        .card-desc { color: #cccccc; line-height: 1.6; }
         .cta-container { text-align: center; margin-top: 50px; }
         .cta-btn { display: inline-block; background: transparent; color: #d4af37; border: 2px solid #d4af37; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
         .cta-btn:hover { background: #d4af37; color: #121212; transform: translateY(-3px); }
-        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); justify-content: center; align-items: center; z-index: 1000; }
-        .modal-box { background: #1c1c1c; border: 2px solid #d4af37; border-radius: 8px; width: 90%; max-width: 1100px; padding: 30px; position: relative; }
-        .close-modal { position: absolute; top: 15px; right: 20px; color: #d4af37; font-size: 30px; cursor: pointer; font-weight: bold; }
-        .split-view-container { display: flex; gap: 30px; justify-content: center; align-items: stretch; margin-top: 20px; }
-        .split-pane { flex: 1; background: #121212; border: 1px solid #333; border-radius: 6px; padding: 15px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; }
-        .pane-img { max-width: 100%; max-height: 450px; object-fit: contain; border-radius: 4px; }
-        .pane-caption { margin-top: 15px; color: #888; font-size: 0.9rem; text-transform: uppercase; }
     </style>
-    <script>
-        function toggleModal(show) {
-            document.getElementById('publicationModal').style.display = show ? 'flex' : 'none';
-        }
-        function accessProtectedAsset(targetPdfUrl) {
-            if (sessionStorage.getItem("portfolio_authorized") === "true") {
-                window.open(targetPdfUrl, "_blank");
-            } else {
-                var userInput = prompt("🔒 This document contains private information.\nPlease enter the security authorization key to view:");
-                if (userInput === "Ashwin123") {
-                    sessionStorage.setItem("portfolio_authorized", "true");
-                    window.open(targetPdfUrl, "_blank");
-                } else if (userInput !== null) {
-                    alert("❌ Invalid authorization token. Access denied.");
-                }
-            }
-        }
-    </script>
 </head>
 <body>
 
@@ -74,52 +48,28 @@
     </header>
 
     <main class="container">
-        <h1>THE OFFICE: ACADEMIA & CREDENTIALS</h1>
-        <div class="establishment-tag">Elite</div>
+        <h1>THE ASHWIN PORTFOLIO SUITE</h1>
+        <p>Explore specialized tracks detailing distinct domains of professional leadership, academic research, and operational engineering.</p>
         
-        <div class="edu-card">
-            <div class="edu-title">Master of Science in Business Analytics</div>
-            <div class="edu-institution">University of Exeter</div>
-            <p class="edu-desc">Advanced postgraduate specialization focusing on data-driven decision making, predictive modeling, and business intelligence architectures to transform complex data infrastructure into operational strategy.</p>
-            <a href="#" onclick="toggleModal(true); return false;" class="cert-link">Published research: “Strategies for Pharmaceutical Resilience” (Edward Elgar Publishing Ltd)</a>
-            <br>
-            <a href="#" onclick="accessProtectedAsset('Exeter_Certificate.pdf'); return false;" class="cert-link" style="color: #a5c7eb; margin-top: 8px;">🔒 View MSc Exeter Verified Degree Certificate (Protected)</a>
-        </div>
-
-        <div class="edu-card">
-            <div class="edu-title">Bachelor of Technology in Information Technology</div>
-            <div class="edu-institution">Swami Vivekananda Institute of Technology {Affiliated to JNTU, Hyderabad}</div>
-            <p class="edu-desc">Core foundational engineering degree covering systems architecture, database management, cloud computing concepts, and algorithmic problem-solving.</p>
-            <a href="#" onclick="accessProtectedAsset('BTech.pdf'); return false;" class="cert-link" style="color: #a5c7eb;">🔒 View BTech Verified Degree Certificate (Protected)</a>
-        </div>
-
-        <div class="edu-card">
-            <div class="edu-title">Foundational & Pre-University Registries</div>
-            <div class="edu-institution">Secondary & Intermediate Certification Archives</div>
-            <p class="edu-desc">Verified historical academic records compiling state board examinations and core scientific matriculation frameworks.</p>
-            <a href="#" onclick="accessProtectedAsset('Intermediate&10th.pdf'); return false;" class="cert-link">🔒 Miscellaneous Educational Certificates</a>
+        <div class="hub-grid">
+            <a href="office.html" class="hub-card">
+                <div class="card-title">THE OFFICE</div>
+                <div class="card-desc">Advanced Business Analytics specialization, academic publications on operational resilience, and verified degree registries.</div>
+            </a>
+            <a href="dining.html" class="hub-card">
+                <div class="card-title">THE DINING</div>
+                <div class="card-desc">Enterprise systems consulting history, project roadmap management, and corporate leadership tracking.</div>
+            </a>
+            <a href="kitchen.html" class="hub-card">
+                <div class="card-title">THE KITCHEN</div>
+                <div class="card-desc">High-velocity culinary production, resource allocation tracking, and organizational back-of-house workflow frameworks.</div>
+            </a>
         </div>
 
         <div class="cta-container">
-            <a href="index.html" class="cta-btn">Return to Home</a>
+            <a href="Open_page.html" class="cta-btn">Return to Main</a>
         </div>
     </main>
-
-    <div id="publicationModal" class="modal-overlay" onclick="toggleModal(false)">
-        <div class="modal-box" onclick="event.stopPropagation()">
-            <span class="close-modal" onclick="toggleModal(false)">&times;</span>
-            <div class="split-view-container">
-                <a href="https://www.e-elgar.com/shop/gbp/forecasting-planning-and-strategy-in-a-turbulent-era-9781035317233.html" target="_blank" class="split-pane">
-                    <img src="Hardbook.PNG" class="pane-img">
-                    <div class="pane-caption">Click to view book at E-Elgar</div>
-                </a>
-                <a href="https://www.elgaronline.com/edcollchap/book/9781035317240/chapter7.xml" target="_blank" class="split-pane">
-                    <img src="Chapter.PNG" class="pane-img">
-                    <div class="pane-caption">Click to view full chapter abstract</div>
-                </a>
-            </div>
-        </div>
-    </div>
 
 </body>
 </html>
