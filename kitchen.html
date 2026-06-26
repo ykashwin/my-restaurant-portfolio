@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Kitchen - Culinary Experience</title>
     <style>
+        @font-face {
+            font-family: 'Le Jour Serif';
+            src: url('LeJourSerif.woff2') format('woff2'),
+                 url('LeJourSerif.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
         body { 
             margin: 0; 
             padding: 0; 
@@ -20,12 +29,32 @@
         .nav-links { list-style: none; display: flex; gap: 30px; padding: 0; margin: 0; }
         .nav-links a { color: #d4af37; text-decoration: none; font-weight: bold; font-size: 18px; }
         .nav-links a:hover { color: #ffffff; border-bottom: 2px solid #d4af37; }
+        
         .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
-        h1 { color: #d4af37; text-align: center; margin-bottom: 40px; font-size: 2.5rem; letter-spacing: 2px; }
+        
+        /* Typography Updates */
+        h1 { 
+            font-family: 'Le Jour Serif', 'Georgia', serif;
+            color: #d4af37; 
+            text-align: center; 
+            margin-bottom: 40px; 
+            font-size: 2.5rem; 
+            letter-spacing: 2px; 
+        }
+        .job-title { 
+            font-family: 'Le Jour Serif', 'Georgia', serif;
+            font-size: 1.4rem; 
+            color: #ffffff; 
+            font-weight: bold; 
+            margin: 0; 
+        }
+        .modal-box h2 {
+            font-family: 'Le Jour Serif', 'Georgia', serif;
+        }
+        
         .timeline { border-left: 2px solid #d4af37; padding-left: 20px; margin-left: 20px; }
         .timeline-item { margin-bottom: 40px; position: relative; }
         .timeline-item::before { content: ''; position: absolute; left: -27px; top: 5px; width: 12px; height: 12px; background: #d4af37; border-radius: 50%; }
-        .job-title { font-size: 1.4rem; color: #ffffff; font-weight: bold; margin: 0; }
         .company-date { font-size: 1rem; color: #d4af37; margin: 5px 0 15px 0; font-style: italic; }
         .company-link { color: #d4af37; text-decoration: none; font-weight: bold; cursor: pointer; }
         .company-link:hover { text-decoration: underline; color: #ffffff; }
@@ -45,6 +74,7 @@
         .close-lightbox { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 40px; cursor: pointer; font-weight: bold; }
     </style>
     <script>
+        // Immersive modal showcases matching active build tags
         function toggleModal(modalId, show) {
             document.getElementById(modalId).style.display = show ? 'flex' : 'none';
         }
