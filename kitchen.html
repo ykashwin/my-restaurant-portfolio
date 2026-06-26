@@ -27,24 +27,19 @@
         .timeline-item::before { content: ''; position: absolute; left: -27px; top: 5px; width: 12px; height: 12px; background: #d4af37; border-radius: 50%; }
         .job-title { font-size: 1.4rem; color: #ffffff; font-weight: bold; margin: 0; }
         .company-date { font-size: 1rem; color: #d4af37; margin: 5px 0 15px 0; font-style: italic; }
-        
         .company-link { color: #d4af37; text-decoration: none; font-weight: bold; cursor: pointer; }
         .company-link:hover { text-decoration: underline; color: #ffffff; }
-        
         .job-desc { color: #cccccc; line-height: 1.6; font-size: 1.05rem; }
         .cta-container { text-align: center; margin-top: 50px; }
         .cta-btn { display: inline-block; background: transparent; color: #d4af37; border: 2px solid #d4af37; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
         .cta-btn:hover { background: #d4af37; color: #121212; transform: translateY(-3px); }
-
         .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.95); justify-content: center; align-items: center; z-index: 1000; }
         .modal-box { background: #1c1c1c; border: 2px solid #d4af37; border-radius: 12px; width: 90%; max-width: 1000px; padding: 30px; position: relative; box-shadow: 0 0 30px rgba(212, 175, 55, 0.2); text-align: center; }
         .close-modal { position: absolute; top: 15px; right: 25px; color: #d4af37; font-size: 35px; cursor: pointer; font-weight: bold; z-index: 1010; }
         .close-modal:hover { color: #fff; }
-
         .collage-display-wrapper { width: 100%; margin-top: 20px; border-radius: 8px; overflow: hidden; border: 1px solid #333; background: #121212; cursor: pointer; box-shadow: 0 8px 25px rgba(0,0,0,0.5); }
         .collage-display-wrapper:hover { border-color: #d4af37; transform: scale(1.01); transition: all 0.3s ease; }
         .collage-display-wrapper img { width: 100%; height: auto; display: block; object-fit: contain; }
-
         .lightbox-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.98); justify-content: center; align-items: center; z-index: 2000; }
         .lightbox-content { max-width: 95%; max-height: 90vh; border: 2px solid #d4af37; border-radius: 6px; box-shadow: 0 0 40px rgba(212,175,55,0.4); }
         .close-lightbox { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 40px; cursor: pointer; font-weight: bold; }
@@ -83,30 +78,22 @@
         <div class="timeline">
             <div class="timeline-item">
                 <div class="job-title">Sous Chef</div>
-                <div class="company-date">
-                    <span class="company-link" onclick="toggleModal('harrysModal', true)">Harry's Restaurant ↗</span>
-                </div>
+                <div class="company-date"><span class="company-link" onclick="toggleModal('harrysModal', true)">Harry's Restaurant ↗</span></div>
                 <div class="job-desc">Directed kitchen stations, managed inventory velocity, enforced strict quality control, and orchestrated back-of-house team assembly to deliver flawless service under intense operational pressure.</div>
             </div>
             <div class="timeline-item">
                 <div class="job-title">Sous Chef</div>
-                <div class="company-date">
-                    <span class="company-link" onclick="toggleModal('cosyClubModal', true)">Cosy Club ↗</span>
-                </div>
+                <div class="company-date"><span class="company-link" onclick="toggleModal('cosyClubModal', true)">Cosy Club ↗</span></div>
                 <div class="job-desc">Supervised line execution, engineered shift resource allocation, handled real-time conflict management, and minimized operational waste during peak multi-cover high-volume rushes.</div>
             </div>
             <div class="timeline-item">
                 <div class="job-title">Line Chef</div>
-                <div class="company-date">
-                    <span class="company-link" onclick="toggleModal('wagamamaModal', true)">Wagamama ↗</span>
-                </div>
+                <div class="company-date"><span class="company-link" onclick="toggleModal('wagamamaModal', true)">Wagamama ↗</span></div>
                 <div class="job-desc">Mastered high-speed line operations, precision timing, and standardized station throughput matching strict recipe frameworks in a rapid service ecosystem.</div>
             </div>
             <div class="timeline-item">
                 <div class="job-title">Kitchen Staff</div>
-                <div class="company-date">
-                    <span class="company-link" onclick="toggleModal('tacoBellModal', true)">Taco Bell ↗</span>
-                </div>
+                <div class="company-date"><span class="company-link" onclick="toggleModal('tacoBellModal', true)">Taco Bell ↗</span></div>
                 <div class="job-desc">Maintained core supply flow, supported rapid assembly logistics, and built foundational knowledge of cross-functional team synchronization under high-velocity turnaround requirements.</div>
             </div>
         </div>
