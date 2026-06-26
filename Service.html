@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services</title>
     <style>
+        @font-face {
+            font-family: 'Le Jour Serif';
+            src: url('LeJourSerif.woff2') format('woff2'),
+                 url('LeJourSerif.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
         body { 
             margin: 0; 
             padding: 0; 
@@ -20,10 +29,26 @@
         .nav-links { list-style: none; display: flex; gap: 30px; padding: 0; margin: 0; }
         .nav-links a { color: #d4af37; text-decoration: none; font-weight: bold; font-size: 18px; }
         .nav-links a:hover { color: #ffffff; border-bottom: 2px solid #d4af37; }
+        
         .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; text-align: center; }
-        h1 { color: #d4af37; font-size: 2.5rem; margin-bottom: 40px; letter-spacing: 2px; }
+        
+        /* Typography Updates */
+        h1 { 
+            font-family: 'Le Jour Serif', 'Georgia', serif;
+            color: #d4af37; 
+            font-size: 2.5rem; 
+            margin-bottom: 40px; 
+            letter-spacing: 2px; 
+        }
+        .service-title { 
+            font-family: 'Le Jour Serif', 'Georgia', serif;
+            font-size: 1.4rem; 
+            color: #ffffff; 
+            font-weight: bold; 
+            margin-bottom: 10px; 
+        }
+        
         .service-card { background: rgba(28, 28, 28, 0.9); border: 1px solid #d4af37; padding: 30px; border-radius: 8px; text-align: left; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-        .service-title { font-size: 1.4rem; color: #ffffff; font-weight: bold; margin-bottom: 10px; }
         .service-desc { color: #cccccc; line-height: 1.6; font-size: 1.05rem; }
         .cta-container { text-align: center; margin-top: 50px; }
         .cta-btn { display: inline-block; background: transparent; color: #d4af37; border: 2px solid #d4af37; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
@@ -36,7 +61,7 @@
         <div class="logo-container"><img src="logo.png" alt="Logo" style="height: 50px;"></div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="hub.html">Home</a></li>
                 <li><a href="About.html">About us</a></li>
                 <li><a href="Service.html">Service</a></li>
                 <li><a href="Contact.html">Contact us</a></li>
@@ -58,7 +83,7 @@
         </div>
 
         <div class="cta-container">
-            <a href="Open_page.html" class="cta-btn">Return to Main</a>
+            <a href="index.html" class="cta-btn">Return to Main</a>
         </div>
     </main>
 
