@@ -32,15 +32,8 @@
         .close-modal { position: absolute; top: 15px; right: 25px; color: #d4af37; font-size: 35px; cursor: pointer; font-weight: bold; z-index: 1010; }
         .close-modal:hover { color: #fff; }
 
-        /* --- SINGLE MASTER COLLAGE CONTAINER --- */
-        .collage-display-wrapper { width: 100%; margin-top: 20px; border-radius: 8px; overflow: hidden; border: 1px solid #333; background: #121212; cursor: pointer; box-shadow: 0 8px 25px rgba(0,0,0,0.5); }
-        .collage-display-wrapper:hover { border-color: #d4af37; transform: scale(1.01); transition: all 0.3s ease; }
-        .collage-display-wrapper img { width: 100%; height: auto; display: block; object-fit: contain; }
-
-        /* --- LIGHTBOX FOCUS POPUP --- */
-        .lightbox-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.98); justify-content: center; align-items: center; z-index: 2000; }
-        .lightbox-content { max-width: 95%; max-height: 90vh; border: 2px solid #d4af37; border-radius: 6px; box-shadow: 0 0 40px rgba(212,175,55,0.4); }
-        .close-lightbox { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 40px; cursor: pointer; font-weight: bold; }
+        /* --- PDF EMBED EMBED FRAMING --- */
+        .pdf-viewer-frame { width: 100%; height: 70vh; margin-top: 20px; border-radius: 8px; border: 1px solid #333; background: #222; }
 
         /* --- TACO BELL MODAL SYSTEM --- */
         .diamond-matrix { display: flex; flex-direction: column; align-items: center; gap: 30px; margin-top: 30px; }
@@ -52,17 +45,6 @@
     <script>
         function toggleModal(modalId, show) {
             document.getElementById(modalId).style.display = show ? 'flex' : 'none';
-        }
-        
-        function magnifyImage(imgSrc) {
-            var lightbox = document.getElementById('lightboxContainer');
-            var lightboxImg = document.getElementById('lightboxImg');
-            lightboxImg.src = imgSrc;
-            lightbox.style.display = 'flex';
-        }
-        
-        function closeMagnifier() {
-            document.getElementById('lightboxContainer').style.display = 'none';
         }
     </script>
 </head>
@@ -130,11 +112,9 @@
     <div id="wagamamaModal" class="modal-overlay" onclick="toggleModal('wagamamaModal', false)">
         <div class="modal-box" onclick="event.stopPropagation()">
             <span class="close-modal" onclick="toggleModal('wagamamaModal', false)">&times;</span>
-            <h2 style="color: #d4af37; margin: 0 0 10px 0; text-align: center; letter-spacing: 2px; font-size: 1.4rem;">WAGAMAMA MEMORIES & SHOWCASE</h2>
+            <h2 style="color: #d4af37; margin: 0; text-align: center; letter-spacing: 2px; font-size: 1.4rem;">WAGAMAMA PORTFOLIO DOCUMENT</h2>
             
-            <div class="collage-display-wrapper" onclick="magnifyImage('Wagamama.PNG')">
-                <img src="Wagamama.PNG" alt="Wagamama Combined Collage Showcase">
-            </div>
+            <iframe src="Wagamama.pdf" class="pdf-viewer-frame"></iframe>
         </div>
     </div>
 
@@ -153,11 +133,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div id="lightboxContainer" class="lightbox-overlay" onclick="closeMagnifier()">
-        <span class="close-lightbox" onclick="closeMagnifier()">&times;</span>
-        <img id="lightboxImg" class="lightbox-content" src="" alt="Magnified View" onclick="event.stopPropagation()">
     </div>
 
 </body>
