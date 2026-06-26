@@ -3,79 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Rare Analyst RESTAURANT - Home</title>
+    <title>The Main Hub - Portfolio Portfolio</title>
     <style>
-        /* A sleek, dark theme styling matching your images */
-        body {
-            margin: 0;
-            padding: 0;
-            background: #121212;
-            color: #f5f5f5;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        body { 
+            margin: 0; 
+            padding: 0; 
+            background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), url('Background.png'); 
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            background-repeat: no-repeat;
+            color: #f5f5f5; 
+            font-family: 'Segoe UI', sans-serif; 
         }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background: rgba(0, 0, 0, 0.8);
-        }
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-        }
-        .nav-links a {
-            color: #d4af37; /* Elegant gold tone */
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        .nav-links a:hover, .nav-links a.active {
-            color: #ffffff;
-            border-bottom: 2px solid #d4af37;
-        }
-        .hub-container {
-            text-align: center;
-            padding: 100px 20px;
-        }
-        .split-hub-options {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 50px;
-        }
-        .hub-card {
-            background: #1c1c1c;
-            border: 1px solid #d4af37;
-            padding: 40px;
-            width: 300px;
-            text-decoration: none;
-            color: #ffffff;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-        .hub-card:hover {
-            transform: translateY(-10px);
-            background: #262626;
-        }
-        .hub-card h2 {
-            color: #d4af37;
-            margin-bottom: 15px;
-        }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: rgba(0,0,0,0.85); border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
+        .nav-links { list-style: none; display: flex; gap: 30px; padding: 0; margin: 0; }
+        .nav-links a { color: #d4af37; text-decoration: none; font-weight: bold; font-size: 18px; }
+        .nav-links a:hover { color: #ffffff; border-bottom: 2px solid #d4af37; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 80px 20px; text-align: center; }
+        h1 { color: #d4af37; font-size: 3rem; margin-bottom: 20px; letter-spacing: 3px; text-shadow: 0 2px 4px rgba(0,0,0,0.6); }
+        p { font-size: 1.2rem; color: #cccccc; margin-bottom: 50px; }
+        .hub-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 20px; }
+        .hub-card { background: rgba(28, 28, 28, 0.9); border: 1px solid #d4af37; padding: 30px; border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .hub-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2); border-color: #ffffff; }
+        .card-title { font-size: 1.5rem; color: #d4af37; font-weight: bold; margin-bottom: 15px; }
+        .card-desc { color: #cccccc; line-height: 1.6; }
     </style>
 </head>
 <body>
 
-    <!-- Global Header & Navigation -->
     <header>
-        <div class="logo-container">
-            <!-- This points to the logo you uploaded to your repository -->
-            <img src="logo.png" alt="The Rare Analyst Logo" style="height: 50px;">
-        </div>
+        <div class="logo-container"><img src="logo.png" alt="Logo" style="height: 50px;"></div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="About.html">About us</a></li>
                 <li><a href="Service.html">Service</a></li>
                 <li><a href="Contact.html">Contact us</a></li>
@@ -83,29 +44,23 @@
         </nav>
     </header>
 
-    <!-- Main Content Container with Three Decks -->
-    <main class="hub-container">
-        <h1>CHOOSE YOUR DECK</h1>
-        <div class="split-hub-options">
-            
-            <!-- Deck 1: The Office (Academia & Credentials) -->
+    <main class="container">
+        <h1>THE ASHWIN PORTFOLIO SUITE</h1>
+        <p>Explore specialized tracks detailing distinct domains of professional leadership, academic research, and operational engineering.</p>
+        
+        <div class="hub-grid">
             <a href="office.html" class="hub-card">
-                <h2>THE OFFICE</h2>
-                <p>Explore Academic Background, MSc Business Analytics, and Technical Certifications.</p>
+                <div class="card-title">THE OFFICE</div>
+                <div class="card-desc">Advanced Business Analytics specialization, academic publications on operational resilience, and verified degree registries.</div>
             </a>
-
-            <!-- Deck 2: The Dining (Corporate Timeline) -->
             <a href="dining.html" class="hub-card">
-                <h2>THE DINING</h2>
-                <p>Explore Enterprise Consulting, Cloud Transformation, and Work Experience from IBM to Mindtree.</p>
+                <div class="card-title">THE DINING</div>
+                <div class="card-desc">Enterprise systems consulting history, project roadmap management, and corporate leadership tracking.</div>
             </a>
-
-            <!-- Deck 3: The Kitchen (Culinary Journey) -->
             <a href="kitchen.html" class="hub-card">
-                <h2>THE KITCHEN</h2>
-                <p>Explore High-Velocity Operations, Team Synchronization, and Chef Experience.</p>
+                <div class="card-title">THE KITCHEN</div>
+                <div class="card-desc">High-velocity culinary production, resource allocation tracking, and organizational back-of-house workflow frameworks.</div>
             </a>
-
         </div>
     </main>
 
