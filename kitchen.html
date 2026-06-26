@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Kitchen - Culinary Experience</title>
     <style>
-        body { margin: 0; padding: 0; background: #121212; color: #f5f5f5; font-family: 'Segoe UI', sans-serif; }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: rgba(0,0,0,0.8); }
+        body { 
+            margin: 0; 
+            padding: 0; 
+            background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), url('Background.png'); 
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            background-repeat: no-repeat;
+            color: #f5f5f5; 
+            font-family: 'Segoe UI', sans-serif; 
+        }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: rgba(0,0,0,0.85); border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
         .nav-links { list-style: none; display: flex; gap: 30px; padding: 0; margin: 0; }
         .nav-links a { color: #d4af37; text-decoration: none; font-weight: bold; font-size: 18px; }
         .nav-links a:hover { color: #ffffff; border-bottom: 2px solid #d4af37; }
@@ -26,18 +36,15 @@
         .cta-btn { display: inline-block; background: transparent; color: #d4af37; border: 2px solid #d4af37; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
         .cta-btn:hover { background: #d4af37; color: #121212; transform: translateY(-3px); }
 
-        /* --- PRIMARY MODAL WINDOW LAYER --- */
         .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.95); justify-content: center; align-items: center; z-index: 1000; }
         .modal-box { background: #1c1c1c; border: 2px solid #d4af37; border-radius: 12px; width: 90%; max-width: 1000px; padding: 30px; position: relative; box-shadow: 0 0 30px rgba(212, 175, 55, 0.2); text-align: center; }
         .close-modal { position: absolute; top: 15px; right: 25px; color: #d4af37; font-size: 35px; cursor: pointer; font-weight: bold; z-index: 1010; }
         .close-modal:hover { color: #fff; }
 
-        /* --- UNIFIED IMAGE DISPLAY FRAMEWORK --- */
         .collage-display-wrapper { width: 100%; margin-top: 20px; border-radius: 8px; overflow: hidden; border: 1px solid #333; background: #121212; cursor: pointer; box-shadow: 0 8px 25px rgba(0,0,0,0.5); }
         .collage-display-wrapper:hover { border-color: #d4af37; transform: scale(1.01); transition: all 0.3s ease; }
         .collage-display-wrapper img { width: 100%; height: auto; display: block; object-fit: contain; }
 
-        /* --- LIGHTBOX FOCUS POPUP --- */
         .lightbox-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.98); justify-content: center; align-items: center; z-index: 2000; }
         .lightbox-content { max-width: 95%; max-height: 90vh; border: 2px solid #d4af37; border-radius: 6px; box-shadow: 0 0 40px rgba(212,175,55,0.4); }
         .close-lightbox { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 40px; cursor: pointer; font-weight: bold; }
@@ -46,14 +53,12 @@
         function toggleModal(modalId, show) {
             document.getElementById(modalId).style.display = show ? 'flex' : 'none';
         }
-        
         function magnifyImage(imgSrc) {
             var lightbox = document.getElementById('lightboxContainer');
             var lightboxImg = document.getElementById('lightboxImg');
             lightboxImg.src = imgSrc;
             lightbox.style.display = 'flex';
         }
-        
         function closeMagnifier() {
             document.getElementById('lightboxContainer').style.display = 'none';
         }
@@ -76,51 +81,34 @@
     <main class="container">
         <h1>THE KITCHEN: CULINARY LEADERSHIP</h1>
         <div class="timeline">
-
-            <!-- Harry's Restaurant Hub -->
             <div class="timeline-item">
                 <div class="job-title">Sous Chef</div>
                 <div class="company-date">
                     <span class="company-link" onclick="toggleModal('harrysModal', true)">Harry's Restaurant ↗</span>
                 </div>
-                <div class="job-desc">
-                    Directed kitchen stations, managed inventory velocity, enforced strict quality control, and orchestrated back-of-house team assembly to deliver flawless service under intense operational pressure.
-                </div>
+                <div class="job-desc">Directed kitchen stations, managed inventory velocity, enforced strict quality control, and orchestrated back-of-house team assembly to deliver flawless service under intense operational pressure.</div>
             </div>
-
-            <!-- Cosy Club Hub -->
             <div class="timeline-item">
                 <div class="job-title">Sous Chef</div>
                 <div class="company-date">
                     <span class="company-link" onclick="toggleModal('cosyClubModal', true)">Cosy Club ↗</span>
                 </div>
-                <div class="job-desc">
-                    Supervised line execution, engineered shift resource allocation, handled real-time conflict management, and minimized operational waste during peak multi-cover high-volume rushes.
-                </div>
+                <div class="job-desc">Supervised line execution, engineered shift resource allocation, handled real-time conflict management, and minimized operational waste during peak multi-cover high-volume rushes.</div>
             </div>
-
-            <!-- Wagamama Hub -->
             <div class="timeline-item">
                 <div class="job-title">Line Chef</div>
                 <div class="company-date">
                     <span class="company-link" onclick="toggleModal('wagamamaModal', true)">Wagamama ↗</span>
                 </div>
-                <div class="job-desc">
-                    Mastered high-speed line operations, precision timing, and standardized station throughput matching strict recipe frameworks in a rapid service ecosystem.
-                </div>
+                <div class="job-desc">Mastered high-speed line operations, precision timing, and standardized station throughput matching strict recipe frameworks in a rapid service ecosystem.</div>
             </div>
-
-            <!-- Taco Bell Hub -->
             <div class="timeline-item">
                 <div class="job-title">Kitchen Staff</div>
                 <div class="company-date">
                     <span class="company-link" onclick="toggleModal('tacoBellModal', true)">Taco Bell ↗</span>
                 </div>
-                <div class="job-desc">
-                    Maintained core supply flow, supported rapid assembly logistics, and built foundational knowledge of cross-functional team synchronization under high-velocity turnaround requirements.
-                </div>
+                <div class="job-desc">Maintained core supply flow, supported rapid assembly logistics, and built foundational knowledge of cross-functional team synchronization under high-velocity turnaround requirements.</div>
             </div>
-
         </div>
 
         <div class="cta-container">
@@ -128,54 +116,49 @@
         </div>
     </main>
 
-    <!-- HARRY'S RESTAURANT IMMERSIVE MODAL SYSTEM -->
     <div id="harrysModal" class="modal-overlay" onclick="toggleModal('harrysModal', false)">
         <div class="modal-box" onclick="event.stopPropagation()">
             <span class="close-modal" onclick="toggleModal('harrysModal', false)">&times;</span>
-            <h2 style="color: #d4af37; margin: 0 0 10px 0; text-align: center; letter-spacing: 2px; font-size: 1.4rem;">HARRY'S RESTAURANT GALLERY</h2>
+            <h2 style="color: #d4af37; margin: 0 0 10px 0; text-align: center; font-size: 1.4rem;">HARRY'S RESTAURANT GALLERY</h2>
             <div class="collage-display-wrapper" onclick="magnifyImage('Harrys.png')">
-                <img src="Harrys.png" alt="Harry's Restaurant Culinary Showcase Asset">
+                <img src="Harrys.png">
             </div>
         </div>
     </div>
 
-    <!-- COSY CLUB IMMERSIVE MODAL SYSTEM -->
     <div id="cosyClubModal" class="modal-overlay" onclick="toggleModal('cosyClubModal', false)">
         <div class="modal-box" onclick="event.stopPropagation()">
             <span class="close-modal" onclick="toggleModal('cosyClubModal', false)">&times;</span>
-            <h2 style="color: #d4af37; margin: 0 0 10px 0; text-align: center; letter-spacing: 2px; font-size: 1.4rem;">COSY CLUB MEMORIES & GALLERY</h2>
+            <h2 style="color: #d4af37; margin: 0 0 10px 0; text-align: center; font-size: 1.4rem;">COSY CLUB GALLERY</h2>
             <div class="collage-display-wrapper" onclick="magnifyImage('Cosyclub.png')">
-                <img src="Cosyclub.png" alt="Cosy Club Culinary Showcase Asset">
+                <img src="Cosyclub.png">
             </div>
         </div>
     </div>
 
-    <!-- WAGAMAMA IMMERSIVE IMAGE COLLAGE MODAL -->
     <div id="wagamamaModal" class="modal-overlay" onclick="toggleModal('wagamamaModal', false)">
         <div class="modal-box" onclick="event.stopPropagation()">
             <span class="close-modal" onclick="toggleModal('wagamamaModal', false)">&times;</span>
-            <h2 style="color: #d4af37; margin: 0 0 10px 0; text-align: center; letter-spacing: 2px; font-size: 1.4rem;">WAGAMAMA MEMORIES & SHOWCASE</h2>
+            <h2 style="color: #d4af37; margin: 0 0 10px 0; text-align: center; font-size: 1.4rem;">WAGAMAMA SHOWCASE</h2>
             <div class="collage-display-wrapper" onclick="magnifyImage('Wagamama.PNG')">
-                <img src="Wagamama.PNG" alt="Wagamama Combined Showcase Canvas">
+                <img src="Wagamama.PNG">
             </div>
         </div>
     </div>
 
-    <!-- TACO BELL STREAMLINED SINGLE-IMAGE MODAL SYSTEM -->
     <div id="tacoBellModal" class="modal-overlay" onclick="toggleModal('tacoBellModal', false)">
         <div class="modal-box" onclick="event.stopPropagation()">
             <span class="close-modal" onclick="toggleModal('tacoBellModal', false)">&times;</span>
-            <h2 style="color: #d4af37; margin: 0 0 10px 0; text-align: center; letter-spacing: 2px; font-size: 1.4rem;">TACO BELL GALERIA</h2>
+            <h2 style="color: #d4af37; margin: 0 0 10px 0; text-align: center; font-size: 1.4rem;">TACO BELL GALERIA</h2>
             <div class="collage-display-wrapper" onclick="magnifyImage('Taco.png')">
-                <img src="Taco.png" alt="Taco Bell Presentation Asset">
+                <img src="Taco.png">
             </div>
         </div>
     </div>
 
-    <!-- GLOBAL LIGHTBOX POPUP FOR FULL SCREEN ZOOM -->
     <div id="lightboxContainer" class="lightbox-overlay" onclick="closeMagnifier()">
         <span class="close-lightbox" onclick="closeMagnifier()">&times;</span>
-        <img id="lightboxImg" class="lightbox-content" src="" alt="Magnified View" onclick="event.stopPropagation()">
+        <img id="lightboxImg" class="lightbox-content" src="" onclick="event.stopPropagation()">
     </div>
 
 </body>
