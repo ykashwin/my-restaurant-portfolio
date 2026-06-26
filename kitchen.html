@@ -87,7 +87,9 @@
 
             <div class="timeline-item">
                 <div class="job-title">Sous Chef</div>
-                <div class="company-date">Cosy Club</div>
+                <div class="company-date">
+                    <span class="company-link" onclick="toggleModal('cosyClubModal', true)">Cosy Club ↗</span>
+                </div>
                 <div class="job-desc">
                     Supervised line execution, engineered shift resource allocation, handled real-time conflict management, and minimized operational waste during peak multi-cover high-volume rushes.
                 </div>
@@ -120,31 +122,12 @@
         </div>
     </main>
 
-    <div id="wagamamaModal" class="modal-overlay" onclick="toggleModal('wagamamaModal', false)">
+    <div id="cosyClubModal" class="modal-overlay" onclick="toggleModal('cosyClubModal', false)">
         <div class="modal-box" onclick="event.stopPropagation()">
-            <span class="close-modal" onclick="toggleModal('wagamamaModal', false)">&times;</span>
-            <h2 style="color: #d4af37; margin: 0 0 10px 0; text-align: center; letter-spacing: 2px; font-size: 1.4rem;">WAGAMAMA MEMORIES & SHOWCASE</h2>
-            <div class="collage-display-wrapper" onclick="magnifyImage('Wagamama.PNG')">
-                <img src="Wagamama.PNG" alt="Wagamama Combined Showcase Canvas">
+            <span class="close-modal" onclick="toggleModal('cosyClubModal', false)">&times;</span>
+            <h2 style="color: #d4af37; margin: 0 0 10px 0; text-align: center; letter-spacing: 2px; font-size: 1.4rem;">COSY CLUB MEMORIES & GALLERY</h2>
+            <div class="collage-display-wrapper" onclick="magnifyImage('Cosyclub.png')">
+                <img src="Cosyclub.png" alt="Cosy Club Culinary Showcase Asset">
             </div>
         </div>
     </div>
-
-    <div id="tacoBellModal" class="modal-overlay" onclick="toggleModal('tacoBellModal', false)">
-        <div class="modal-box" onclick="event.stopPropagation()">
-            <span class="close-modal" onclick="toggleModal('tacoBellModal', false)">&times;</span>
-            <h2 style="color: #d4af37; margin: 0 0 10px 0; text-align: center; letter-spacing: 2px; font-size: 1.4rem;">TACO BELL GALERIA</h2>
-            
-            <div class="collage-display-wrapper" onclick="magnifyImage('Taco.png')">
-                <img src="Taco.png" alt="Taco Bell Presentation Asset">
-            </div>
-        </div>
-    </div>
-
-    <div id="lightboxContainer" class="lightbox-overlay" onclick="closeMagnifier()">
-        <span class="close-lightbox" onclick="closeMagnifier()">&times;</span>
-        <img id="lightboxImg" class="lightbox-content" src="" alt="Magnified View" onclick="event.stopPropagation()">
-    </div>
-
-</body>
-</html>
