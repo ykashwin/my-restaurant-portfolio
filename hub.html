@@ -30,9 +30,8 @@
         .nav-links a { color: #d4af37; text-decoration: none; font-weight: bold; font-size: 18px; }
         .nav-links a:hover { color: #ffffff; border-bottom: 2px solid #d4af37; }
         
-        .container { max-width: 1000px; margin: 0 auto; padding: 80px 20px; text-align: center; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 80px 20px; text-align: center; }
         
-        /* Typography Updates */
         h1 { 
             font-family: 'Le Jour Serif', 'Georgia', serif;
             color: #d4af37; 
@@ -40,22 +39,55 @@
             margin-bottom: 20px; 
             letter-spacing: 3px; 
         }
+        p { font-size: 1.2rem; color: #cccccc; margin-bottom: 60px; }
+        
+        .hub-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 20px; }
+        
+        /* Containers are completely transparent with no gray backgrounds or borders */
+        .hub-card { 
+            background: transparent; 
+            border: none; 
+            padding: 20px 10px; 
+            text-decoration: none; 
+            color: inherit; 
+            transition: all 0.3s ease; 
+            text-align: center;
+        }
+        
+        /* Subtle interactive hover lift effect for usability */
+        .hub-card:hover { 
+            transform: translateY(-8px); 
+        }
+        
         .card-title { 
             font-family: 'Le Jour Serif', 'Georgia', serif;
-            font-size: 1.5rem; 
+            font-size: 1.6rem; 
             color: #d4af37; 
             font-weight: bold; 
             margin-bottom: 15px; 
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        .hub-card:hover .card-title {
+            color: #ffffff;
+            text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
         }
         
-        p { font-size: 1.2rem; color: #cccccc; margin-bottom: 50px; }
-        .hub-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 20px; }
-        .hub-card { background: rgba(28, 28, 28, 0.9); border: 1px solid #d4af37; padding: 30px; border-radius: 8px; text-decoration: none; color: inherit; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-        .hub-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2); border-color: #ffffff; }
-        .card-desc { color: #cccccc; line-height: 1.6; }
-        .cta-container { text-align: center; margin-top: 50px; }
+        .card-desc { 
+            color: #cccccc; 
+            line-height: 1.7; 
+            font-size: 1.05rem;
+        }
+        
+        .cta-container { text-align: center; margin-top: 60px; }
         .cta-btn { display: inline-block; background: transparent; color: #d4af37; border: 2px solid #d4af37; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
         .cta-btn:hover { background: #d4af37; color: #121212; transform: translateY(-3px); }
+
+        /* Responsive stack for tablets and mobile devices */
+        @media (max-width: 850px) {
+            .hub-grid { grid-template-columns: 1fr; gap: 30px; }
+            .hub-card { padding: 20px 0; }
+        }
     </style>
 </head>
 <body>
@@ -81,10 +113,12 @@
                 <div class="card-title">THE OFFICE</div>
                 <div class="card-desc">Advanced Business Analytics specialization, academic publications on operational resilience, and verified degree registries.</div>
             </a>
+            
             <a href="dining.html" class="hub-card">
                 <div class="card-title">THE DINING</div>
                 <div class="card-desc">Enterprise systems consulting history, project roadmap management, and corporate leadership tracking.</div>
             </a>
+            
             <a href="kitchen.html" class="hub-card">
                 <div class="card-title">THE KITCHEN</div>
                 <div class="card-desc">High-velocity culinary production, resource allocation tracking, and organizational back-of-house workflow frameworks.</div>
