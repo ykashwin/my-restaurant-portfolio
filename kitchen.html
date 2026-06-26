@@ -77,14 +77,18 @@
         <h1>THE KITCHEN: CULINARY LEADERSHIP</h1>
         <div class="timeline">
 
+            <!-- Harry's Restaurant Hub -->
             <div class="timeline-item">
                 <div class="job-title">Sous Chef</div>
-                <div class="company-date">Harry's Restaurant</div>
+                <div class="company-date">
+                    <span class="company-link" onclick="toggleModal('harrysModal', true)">Harry's Restaurant ↗</span>
+                </div>
                 <div class="job-desc">
                     Directed kitchen stations, managed inventory velocity, enforced strict quality control, and orchestrated back-of-house team assembly to deliver flawless service under intense operational pressure.
                 </div>
             </div>
 
+            <!-- Cosy Club Hub -->
             <div class="timeline-item">
                 <div class="job-title">Sous Chef</div>
                 <div class="company-date">
@@ -95,6 +99,7 @@
                 </div>
             </div>
 
+            <!-- Wagamama Hub -->
             <div class="timeline-item">
                 <div class="job-title">Line Chef</div>
                 <div class="company-date">
@@ -105,6 +110,7 @@
                 </div>
             </div>
 
+            <!-- Taco Bell Hub -->
             <div class="timeline-item">
                 <div class="job-title">Kitchen Staff</div>
                 <div class="company-date">
@@ -122,6 +128,18 @@
         </div>
     </main>
 
+    <!-- HARRY'S RESTAURANT IMMERSIVE MODAL SYSTEM -->
+    <div id="harrysModal" class="modal-overlay" onclick="toggleModal('harrysModal', false)">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <span class="close-modal" onclick="toggleModal('harrysModal', false)">&times;</span>
+            <h2 style="color: #d4af37; margin: 0 0 10px 0; text-align: center; letter-spacing: 2px; font-size: 1.4rem;">HARRY'S RESTAURANT GALLERY</h2>
+            <div class="collage-display-wrapper" onclick="magnifyImage('Harrys.png')">
+                <img src="Harrys.png" alt="Harry's Restaurant Culinary Showcase Asset">
+            </div>
+        </div>
+    </div>
+
+    <!-- COSY CLUB IMMERSIVE MODAL SYSTEM -->
     <div id="cosyClubModal" class="modal-overlay" onclick="toggleModal('cosyClubModal', false)">
         <div class="modal-box" onclick="event.stopPropagation()">
             <span class="close-modal" onclick="toggleModal('cosyClubModal', false)">&times;</span>
@@ -131,3 +149,34 @@
             </div>
         </div>
     </div>
+
+    <!-- WAGAMAMA IMMERSIVE IMAGE COLLAGE MODAL -->
+    <div id="wagamamaModal" class="modal-overlay" onclick="toggleModal('wagamamaModal', false)">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <span class="close-modal" onclick="toggleModal('wagamamaModal', false)">&times;</span>
+            <h2 style="color: #d4af37; margin: 0 0 10px 0; text-align: center; letter-spacing: 2px; font-size: 1.4rem;">WAGAMAMA MEMORIES & SHOWCASE</h2>
+            <div class="collage-display-wrapper" onclick="magnifyImage('Wagamama.PNG')">
+                <img src="Wagamama.PNG" alt="Wagamama Combined Showcase Canvas">
+            </div>
+        </div>
+    </div>
+
+    <!-- TACO BELL STREAMLINED SINGLE-IMAGE MODAL SYSTEM -->
+    <div id="tacoBellModal" class="modal-overlay" onclick="toggleModal('tacoBellModal', false)">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <span class="close-modal" onclick="toggleModal('tacoBellModal', false)">&times;</span>
+            <h2 style="color: #d4af37; margin: 0 0 10px 0; text-align: center; letter-spacing: 2px; font-size: 1.4rem;">TACO BELL GALERIA</h2>
+            <div class="collage-display-wrapper" onclick="magnifyImage('Taco.png')">
+                <img src="Taco.png" alt="Taco Bell Presentation Asset">
+            </div>
+        </div>
+    </div>
+
+    <!-- GLOBAL LIGHTBOX POPUP FOR FULL SCREEN ZOOM -->
+    <div id="lightboxContainer" class="lightbox-overlay" onclick="closeMagnifier()">
+        <span class="close-lightbox" onclick="closeMagnifier()">&times;</span>
+        <img id="lightboxImg" class="lightbox-content" src="" alt="Magnified View" onclick="event.stopPropagation()">
+    </div>
+
+</body>
+</html>
