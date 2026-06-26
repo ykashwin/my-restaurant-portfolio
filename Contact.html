@@ -24,21 +24,18 @@
         .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; text-align: center; }
         h1 { color: #d4af37; font-size: 2.8rem; margin-bottom: 40px; letter-spacing: 3px; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
         
-        /* Unified Wrapper Box Framing */
+        /* Box borders and dark card background removed completely per the screenshot targets */
         .contact-box { 
             display: flex; 
-            background: rgba(20, 20, 20, 0.4); 
-            border: 1px solid rgba(212, 175, 55, 0.25); 
-            border-radius: 12px; 
+            background: transparent; 
+            border: none; 
             overflow: hidden; 
-            box-shadow: 0 12px 40px rgba(0,0,0,0.85);
-            backdrop-filter: blur(8px);
-            align-items: stretch; /* Forces left and right panes to match heights automatically */
+            align-items: stretch; 
             margin-bottom: 40px;
             min-height: 500px;
         }
         
-        /* Left Pane Configured to Force Contact.png to Stretch Edge-to-Edge */
+        /* Left Pane remains perfectly framed */
         .contact-left-pane {
             flex: 1;
             position: relative;
@@ -50,14 +47,15 @@
             height: 100%;
             object-fit: cover;
             display: block;
+            border-radius: 12px; /* Rounds the image edges beautifully since the container border is gone */
         }
         
-        /* Right Information Deck with Seamless Translucency & No Dividing Border */
+        /* Right Information Deck is completely open and transparent */
         .contact-right-pane { 
             flex: 1.2; 
-            padding: 60px 50px; 
+            padding: 40px 0px 40px 60px; /* Adjusted padding since framing box is transparent */
             text-align: left;
-            background: transparent; /* Drops default inner background entirely */
+            background: transparent; 
             display: flex;
             align-items: center;
         }
@@ -72,11 +70,10 @@
         .cta-btn { display: inline-block; background: transparent; color: #d4af37; border: 2px solid #d4af37; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
         .cta-btn:hover { background: #d4af37; color: #121212; transform: translateY(-3px); }
 
-        /* Smooth architectural grid fallback scaling rule */
         @media (max-width: 850px) {
             .contact-box { flex-direction: column; min-height: auto; }
             .contact-left-pane { width: 100%; height: 350px; }
-            .contact-right-pane { padding: 40px 25px; }
+            .contact-right-pane { padding: 40px 0px; }
         }
     </style>
 </head>
@@ -89,7 +86,7 @@
                 <li><a href="hub.html">Home</a></li>
                 <li><a href="About.html">About us</a></li>
                 <li><a href="Service.html">Service</a></li>
-                </ul>
+            </ul>
         </nav>
     </header>
 
@@ -103,9 +100,9 @@
             
             <div class="contact-right-pane">
                 <ul class="contact-list">
-                    <li><strong>Channel:</strong> <a href="linkedin.com/in/ashwin-yadhav-kumar" target="_blank">LinkedIn</a></li>
+                    <li><strong>Channel:</strong> <a href="https://linkedin.com/in/ashwin-yadhav-kumar" target="_blank">LinkedIn</a></li>
                     <li><strong>Location:</strong> India</li>
-                    <li><strong>Mobile:</strong> +91 630 188 7244 (India)| +44 734 101 5971 (UK)</li>
+                    <li><strong>Mobile:</strong> +91 630 188 7244 (India) | +44 734 101 5971 (UK)</li>
                     <li><strong>Web:</strong> <a href="https://ykashwin.github.io/my-restaurant-portfolio" target="_blank">The Bar Analyst Restaurant</a></li>
                     <li><strong>Email:</strong> <a href="mailto:ykashwin@gmail.com">ykashwin@gmail.com</a></li>
                 </ul>
