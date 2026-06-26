@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        @font-face {
+            font-family: 'Le Jour Serif';
+            src: url('LeJourSerif.woff2') format('woff2'),
+                 url('LeJourSerif.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body { 
+            margin: 0; 
+            padding: 0; 
+            background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), url('Background.png'); 
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            background-repeat: no-repeat;
+            color: #f5f5f5; 
+            font-family: 'Segoe UI', sans-serif; 
+        }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: rgba(0,0,0,0.85); border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
+        .nav-links { list-style: none; display: flex; gap: 30px; padding: 0; margin: 0; }
+        .nav-links a { color: #d4af37; text-decoration: none; font-weight: bold; font-size: 18px; }
+        
+        .contact-box { 
+            display: flex; 
+            background: transparent; 
+            border: none; 
+            overflow: hidden; 
+            align-items: stretch; 
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        
+        .contact-left-pane { 
+            flex: 1.1; 
+            padding: 40px;
+            text-align: left;
+        }
+        h1 { 
+            font-family: 'Le Jour Serif', 'Georgia', serif;
+            color: #d4af37; 
+            font-size: 2.8rem; 
+            margin-bottom: 30px; 
+            letter-spacing: 3px;
+        }
+        
+        .about-list { list-style: none; padding: 0; margin: 0; }
+        .about-list li { margin-bottom: 25px; line-height: 1.6; color: #f5f5f5; font-size: 1.1rem; position: relative; padding-left: 20px; }
+        .about-list li::before { content: "•"; color: #d4af37; position: absolute; left: 0; font-size: 1.3rem; }
+        .about-list strong { color: #ffffff; font-size: 1.15rem; }
+        
+        .contact-right-pane {
+            flex: 0.9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .contact-right-pane img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        @media (max-width: 850px) {
+            .contact-box { flex-direction: column; }
+            .contact-right-pane { height: 350px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container"><img src="logo.png" alt="Logo" style="height: 50px;"></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="menu.html">Home</a></li>
+                <li><a href="About.html" style="color: #fff;">About us</a></li>
+                <li><a href="Service.html">Service</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contact-box">
+        <div class="contact-left-pane">
+            <h1>ABOUT US</h1>
+            <ul class="about-list">
+                <li><strong>The Corporate Blueprint:</strong> Cut my teeth in enterprise consulting and cloud transformation, architecting data-driven solutions with SQL, Python, Power BI, and Microsoft Azure. I specialized in modernizing messy data structures, automating enterprise workflows, and proving that a well-built pipeline solves almost any corporate headache.</li>
+                <li><strong>The Academic Refinement:</strong> Upgraded my technical toolbelt with an MSc in Business Analytics from the University of Exeter. Because why just look at charts when you can use predictive modeling, advanced optimization techniques, and data integrity frameworks to actively outsmart operational inefficiencies?</li>
+                <li><strong>The Culinary Stress-Test:</strong> Voluntarily stepped out of the office and into the literal fire as a steakhouse sous chef to test my management models under extreme pressure. I rapidly scaled to leadership in high-velocity kitchens by treating inventory like a volatile database and dinner rushes like critical system deployments.</li>
+            </ul>
+        </div>
+        <div class="contact-right-pane">
+            <img src="about.png" alt="About Showcase Presentation">
+        </div>
+    </div>
+
+</body>
+</html>
