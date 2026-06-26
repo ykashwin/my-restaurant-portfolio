@@ -20,17 +20,63 @@
         .nav-links { list-style: none; display: flex; gap: 30px; padding: 0; margin: 0; }
         .nav-links a { color: #d4af37; text-decoration: none; font-weight: bold; font-size: 18px; }
         .nav-links a:hover { color: #ffffff; border-bottom: 2px solid #d4af37; }
-        .container { max-width: 700px; margin: 0 auto; padding: 60px 20px; text-align: center; }
-        h1 { color: #d4af37; font-size: 2.5rem; margin-bottom: 30px; letter-spacing: 2px; }
-        .contact-box { background: rgba(28, 28, 28, 0.9); border: 1px solid #d4af37; padding: 40px 30px; border-radius: 8px; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-        .contact-list { list-style: none; padding: 0; margin: 0; font-size: 1.1rem; }
-        .contact-list li { margin-bottom: 20px; line-height: 1.6; color: #cccccc; }
-        .contact-list strong { color: #d4af37; display: inline-block; width: 100px; }
-        .contact-list a { color: #ffffff; text-decoration: none; border-bottom: 1px dashed #d4af37; }
+        
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; text-align: center; }
+        h1 { color: #d4af37; font-size: 2.8rem; margin-bottom: 40px; letter-spacing: 3px; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        
+        /* Split Screen Container Setup */
+        .contact-box { 
+            display: flex; 
+            background: rgba(28, 28, 28, 0.6); 
+            border: 1px solid rgba(212, 175, 55, 0.3); 
+            border-radius: 12px; 
+            overflow: hidden; 
+            box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+            backdrop-filter: blur(5px);
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        
+        /* Left Half Image Display Block */
+        .contact-left-pane {
+            flex: 1;
+            height: 500px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .contact-left-pane img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Right Half Information Layout Pane */
+        .contact-right-pane { 
+            flex: 1; 
+            padding: 40px 50px; 
+            text-align: left; 
+        }
+        
+        .contact-list { list-style: none; padding: 0; margin: 0; font-size: 1.15rem; }
+        .contact-list li { margin-bottom: 24px; line-height: 1.6; color: #e0e0e0; }
+        .contact-list strong { color: #d4af37; display: inline-block; width: 110px; font-size: 1.2rem; }
+        .contact-list a { color: #ffffff; text-decoration: none; border-bottom: 1px dashed #d4af37; transition: color 0.2s; }
         .contact-list a:hover { color: #d4af37; }
-        .cta-container { text-align: center; margin-top: 50px; }
+        
+        .cta-container { text-align: center; margin-top: 40px; }
         .cta-btn { display: inline-block; background: transparent; color: #d4af37; border: 2px solid #d4af37; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
         .cta-btn:hover { background: #d4af37; color: #121212; transform: translateY(-3px); }
+
+        /* Responsive breakdown for standard viewports */
+        @media (max-width: 850px) {
+            .contact-box { flex-direction: column; }
+            .contact-left-pane { width: 100%; height: 300px; border-right: none; border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
+            .contact-right-pane { padding: 30px 20px; }
+        }
     </style>
 </head>
 <body>
@@ -39,7 +85,7 @@
         <div class="logo-container"><img src="logo.png" alt="Logo" style="height: 50px;"></div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="hub.html">Home</a></li>
                 <li><a href="About.html">About us</a></li>
                 <li><a href="Service.html">Service</a></li>
                 <li><a href="Contact.html">Contact us</a></li>
@@ -50,18 +96,24 @@
     <main class="container">
         <h1>CONTACT US</h1>
         
-       <div class="contact-box">
-            <ul class="contact-list">
-                <li><strong>Channel:</strong> Private Enterprise Inquiry Network</li>
-                <li><strong>Location:</strong> Hyderabad, India</li>
-                <li><strong>Mobile:</strong> +91 630 188 7244 (India)/ +44 734 101 5971 (UK)</li>
-                <li><strong>Web:</strong> <a href="https://ykashwin.github.io/my-restaurant-portfolio" target="_blank">The Bar Analyst Restaurant</a></li>
-                <li><strong>Email:</strong> <a href="mailto:ykashwin@gmail.com">ykashwin@gmail.com</a></li>
-            </ul>
+        <div class="contact-box">
+            <div class="contact-left-pane">
+                <img src="Contact.png" alt="Restaurant Interior View">
+            </div>
+            
+            <div class="contact-right-pane">
+                <ul class="contact-list">
+                    <li><strong>Channel:</strong> Private Enterprise Inquiry Network</li>
+                    <li><strong>Location:</strong> Hyderabad, India</li>
+                    <li><strong>Mobile:</strong> +91 630 188 7244 (India) / +44 734 101 5971 (UK)</li>
+                    <li><strong>Web:</strong> <a href="https://ykashwin.github.io/my-restaurant-portfolio" target="_blank">The Bar Analyst Restaurant</a></li>
+                    <li><strong>Email:</strong> <a href="mailto:ykashwin@gmail.com">ykashwin@gmail.com</a></li>
+                </ul>
+            </div>
         </div>
 
         <div class="cta-container">
-            <a href="Open_page.html" class="cta-btn">Return to Main</a>
+            <a href="index.html" class="cta-btn">Return to Main</a>
         </div>
     </main>
 
