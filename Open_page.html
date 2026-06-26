@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Entry Portal</title>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 0; 
+            /* Renders Open_page.png across the full canvas without tiling */
+            background: url('Open_page.png'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Segoe UI', sans-serif; 
+        }
+
+        /* Pure Clickable Entry Header Zone matching your image layout */
+        header { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            padding: 30px 40px; 
+            background: rgba(0, 0, 0, 0.45); /* Subtle dark overlay for readability */
+            backdrop-filter: blur(3px); /* Elegant modern glassmorphism blur */
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .nav-links { 
+            list-style: none; 
+            display: flex; 
+            gap: 45px; /* Perfect spacing between clickable options */
+            padding: 0; 
+            margin: 0; 
+        }
+
+        /* Navigation text matches the precise gold tinting rules */
+        .nav-links a { 
+            color: #d4af37; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 20px; 
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .nav-links a:hover { 
+            color: #ffffff; 
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+            transform: scale(1.05);
+        }
+
+        /* Locks down the rest of the canvas so nothing else is clickable or selectable */
+        .disabled-canvas-shield {
+            position: absolute;
+            top: 100px; /* Sits completely below the header */
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 100px);
+            pointer-events: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About us</a></li>
+                <li><a href="Service.html">Service</a></li>
+                <li><a href="Contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="disabled-canvas-shield"></div>
+
+</body>
+</html>
