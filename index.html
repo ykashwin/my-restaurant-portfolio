@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome - Entry Portal</title>
     <style>
+        /* Custom Font Engine Definition */
+        @font-face {
+            font-family: 'Le Jour Serif';
+            src: url('LeJourSerif.woff2') format('woff2'),
+                 url('LeJourSerif.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
         html, body {
             margin: 0;
             padding: 0;
@@ -12,21 +22,18 @@
             height: 100%;
         }
         body { 
-            /* Synchronized to ensure it stretches full-screen without white gaps */
             background: url('OpenPage.png') no-repeat center center fixed; 
             background-size: cover; 
-            background-color: #121212; /* Dark fallback while loading */
+            background-color: #121212; 
             overflow: hidden;
             font-family: 'Segoe UI', sans-serif; 
         }
-        
-        /* Clean, integrated header overlay matching image_2adf77.png */
         header { 
             display: flex; 
             justify-content: center; 
             align-items: center; 
             padding: 25px 40px; 
-            background: rgba(0, 0, 0, 0.55); /* Elegant translucent blend */
+            background: rgba(0, 0, 0, 0.55); 
             border-bottom: 1px solid rgba(212, 175, 55, 0.15);
         }
         .nav-links { 
@@ -40,6 +47,8 @@
             color: #d4af37; 
             text-decoration: none; 
             font-weight: bold; 
+            /* Header navigation links styled with Le Jour Serif */
+            font-family: 'Le Jour Serif', 'Georgia', serif;
             font-size: 20px; 
             letter-spacing: 1px;
             transition: all 0.3s ease;
