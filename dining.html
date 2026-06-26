@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Dining - Corporate Experience</title>
     <style>
-        body { margin: 0; padding: 0; background: #121212; color: #f5f5f5; font-family: 'Segoe UI', sans-serif; }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: rgba(0,0,0,0.8); }
+        body { 
+            margin: 0; 
+            padding: 0; 
+            background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), url('Background.png'); 
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            background-repeat: no-repeat;
+            color: #f5f5f5; 
+            font-family: 'Segoe UI', sans-serif; 
+        }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: rgba(0,0,0,0.85); border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
         .nav-links { list-style: none; display: flex; gap: 30px; padding: 0; margin: 0; }
         .nav-links a { color: #d4af37; text-decoration: none; font-weight: bold; font-size: 18px; }
         .nav-links a:hover { color: #ffffff; border-bottom: 2px solid #d4af37; }
@@ -18,10 +28,32 @@
         .job-title { font-size: 1.4rem; color: #ffffff; font-weight: bold; margin: 0; }
         .company-date { font-size: 1rem; color: #d4af37; margin: 5px 0 15px 0; font-style: italic; }
         .job-desc { color: #cccccc; line-height: 1.6; font-size: 1.05rem; }
+        
+        .secure-vault-box { background: rgba(28, 28, 28, 0.9); border: 1px dashed #d4af37; padding: 25px; border-radius: 8px; text-align: center; margin: 50px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .vault-title { color: #ffffff; font-size: 1.2rem; margin-bottom: 15px; font-weight: bold; letter-spacing: 1px; }
+        .vault-btn { display: inline-block; background: #d4af37; color: #121212; padding: 12px 25px; font-weight: bold; text-decoration: none; border-radius: 4px; font-size: 1rem; cursor: pointer; transition: background 0.3s; }
+        .vault-btn:hover { background: #fff; }
+        .vault-note { color: #888; font-size: 0.9rem; margin-top: 12px; font-style: italic; }
+        
         .cta-container { text-align: center; margin-top: 50px; }
         .cta-btn { display: inline-block; background: transparent; color: #d4af37; border: 2px solid #d4af37; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
         .cta-btn:hover { background: #d4af37; color: #121212; transform: translateY(-3px); }
     </style>
+    <script>
+        function accessProtectedAsset(targetPdfUrl) {
+            if (sessionStorage.getItem("portfolio_authorized") === "true") {
+                window.open(targetPdfUrl, "_blank");
+            } else {
+                var userInput = prompt("🔒 This document contains private information.\nPlease enter the security authorization key to view:");
+                if (userInput === "Ashwin123") {
+                    sessionStorage.setItem("portfolio_authorized", "true");
+                    window.open(targetPdfUrl, "_blank");
+                } else if (userInput !== null) {
+                    alert("❌ Invalid authorization token. Access denied.");
+                }
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -39,47 +71,27 @@
 
     <main class="container">
         <h1>THE DINING: CORPORATE JOURNEY</h1>
+        
         <div class="timeline">
-
-            <!-- Mindtree Milestone -->
             <div class="timeline-item">
                 <div class="job-title">Project Manager / Technical Leader</div>
                 <div class="company-date">Mindtree | February 2022 — September 2022</div>
-                <div class="job-desc">
-                    Spearheaded enterprise infrastructure modernization, successfully managing a high-impact Microsoft Intune implementation project. Aligned cross-functional tech teams to ensure secure, scalable endpoint deployment across the ecosystem.
-                </div>
+                <div class="job-desc">Spearheaded enterprise infrastructure modernization, successfully managing a high-impact Microsoft Intune implementation project. Aligned cross-functional tech teams to ensure secure, scalable endpoint deployment across the ecosystem.</div>
+                <a href="#" onclick="accessProtectedAsset('Mindtree_Offer.pdf'); return false;" style="color: #d4af37; text-decoration: none; font-weight: bold; font-size: 0.95rem; display: inline-block; margin-top: 10px;">🔒 View Mindtree Documentation (Protected)</a>
             </div>
-
-            <!-- Deloitte Milestone -->
             <div class="timeline-item">
                 <div class="job-title">Senior Analyst — Technology Consulting</div>
                 <div class="company-date">Deloitte | October 2014 — February 2022</div>
-                <div class="job-desc">
-                    Architected enterprise modernization strategies and steered major cloud transformation initiatives. Partnered with corporate leadership to replace legacy friction with efficient, automated workflows and robust data governance frameworks.
-                </div>
+                <div class="job-desc">Architected enterprise modernization strategies and steered major cloud transformation initiatives. Partnered with corporate leadership to replace legacy friction with efficient, automated workflows and robust data governance frameworks.</div>
             </div>
-
-            <!-- Dell Milestone -->
-            <div class="timeline-item">
-                <div class="job-title">Enterprise Systems Engineer / Consultant</div>
-                <div class="company-date">Dell</div>
-                <div class="job-desc">
-                    Optimized infrastructure solutions, resolved complex technical bottlenecks, and collaborated with cross-functional teams to deliver stable, high-performance IT architecture for enterprise-level deployments.
-                </div>
-            </div>
-
-            <!-- IBM Milestone -->
-            <div class="timeline-item">
-                <div class="job-title">System Engineer / Enterprise Consultant</div>
-                <div class="company-date">IBM | October 2012 — October 2014</div>
-                <div class="job-desc">
-                    Engineered backend technical solutions, optimized system infrastructure, and supported critical data delivery frameworks to ensure peak operational reliability for global enterprise architectures.
-                </div>
-            </div>
-
         </div>
 
-        <!-- Updated CTA to match your required navigation design -->
+        <div class="secure-vault-box">
+            <div class="vault-title">🔒 SECURE VERIFIED CORPORATE EXPERIENCES</div>
+            <a onclick="accessProtectedAsset('Mindtree_Reliving.pdf')" class="vault-btn">Open Comprehensive Protected PDF Portfolio</a>
+            <div class="vault-note">This folder is encrypted to protect private client information. Please input your assigned portfolio key when prompted.</div>
+        </div>
+
         <div class="cta-container">
             <a href="index.html" class="cta-btn">Return to Home</a>
         </div>
