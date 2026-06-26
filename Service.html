@@ -32,24 +32,37 @@
         
         .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; text-align: center; }
         
-        /* Typography Updates */
         h1 { 
             font-family: 'Le Jour Serif', 'Georgia', serif;
             color: #d4af37; 
             font-size: 2.5rem; 
-            margin-bottom: 40px; 
+            margin-bottom: 50px; 
             letter-spacing: 2px; 
         }
-        .service-title { 
-            font-family: 'Le Jour Serif', 'Georgia', serif;
-            font-size: 1.4rem; 
-            color: #ffffff; 
-            font-weight: bold; 
-            margin-bottom: 10px; 
+        
+        /* Containers are completely transparent with no backgrounds or yellow borders */
+        .service-card { 
+            background: transparent; 
+            border: none; 
+            padding: 20px 0; 
+            text-align: left; 
+            margin-bottom: 40px; 
         }
         
-        .service-card { background: rgba(28, 28, 28, 0.9); border: 1px solid #d4af37; padding: 30px; border-radius: 8px; text-align: left; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-        .service-desc { color: #cccccc; line-height: 1.6; font-size: 1.05rem; }
+        .service-title { 
+            font-family: 'Le Jour Serif', 'Georgia', serif;
+            font-size: 1.5rem; 
+            color: #d4af37; 
+            font-weight: bold; 
+            margin-bottom: 12px; 
+            letter-spacing: 0.5px;
+        }
+        .service-desc { 
+            color: #cccccc; 
+            line-height: 1.7; 
+            font-size: 1.1rem; 
+        }
+        
         .cta-container { text-align: center; margin-top: 50px; }
         .cta-btn { display: inline-block; background: transparent; color: #d4af37; border: 2px solid #d4af37; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
         .cta-btn:hover { background: #d4af37; color: #121212; transform: translateY(-3px); }
@@ -64,7 +77,6 @@
                 <li><a href="hub.html">Home</a></li>
                 <li><a href="About.html">About us</a></li>
                 <li><a href="Service.html">Service</a></li>
-                <li><a href="Contact.html">Contact us</a></li>
             </ul>
         </nav>
     </header>
@@ -73,13 +85,18 @@
         <h1>PROFESSIONAL ARCHITECTURE SERVICES</h1>
         
         <div class="service-card">
-            <div class="service-title">Enterprise Business Analytics Consulting</div>
-            <div class="service-desc">Transforming complex, disparate data silos into highly structured mathematical models to optimize corporate capacity, predict customer demand curves, and streamline resource deployment channels.</div>
+            <div class="service-title">Data Alchemy & Business Intelligence</div>
+            <div class="service-desc">Turning messy, unorganized company data logs into crystal-clear executive roadmaps. Using advanced SQL querying, Python modeling, and dynamic Power BI dashboards, I translate confusing back-end numbers into clear business metrics that humans actually enjoy reading.</div>
         </div>
 
         <div class="service-card">
-            <div class="service-title">Cloud Infrastructure Systems Engineering</div>
-            <div class="service-desc">Architecting automated modern device environments, cloud endpoints, secure identity control tracking platforms, and high-velocity workflow webhooks to bypass human workflow bottlenecks.</div>
+            <div class="service-title">Cloud Architecture & Workflow Automation</div>
+            <div class="service-desc">Building digital bridges that eliminate manual tech headaches. I design secure, automated cloud environments and smart API endpoints inside Microsoft Azure and Intune, ensuring your system operations run smoothly behind the scenes without needing constant supervision.</div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-title">High-Velocity Operations & System Scaling</div>
+            <div class="service-desc">Applying engineering precision to chaotic real-world supply lines. Drawing from years of leading fast-paced restaurant operations under immense rush pressure, I optimize workflow capacity, eliminate inventory waste, and build robust processes that help businesses scale safely.</div>
         </div>
 
         <div class="cta-container">
