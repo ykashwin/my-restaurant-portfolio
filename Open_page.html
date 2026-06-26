@@ -8,7 +8,6 @@
         body { 
             margin: 0; 
             padding: 0; 
-            /* Renders Open_page.png across the full canvas without tiling */
             background: url('Open_page.png'); 
             background-size: cover; 
             background-position: center; 
@@ -18,27 +17,22 @@
             overflow: hidden;
             font-family: 'Segoe UI', sans-serif; 
         }
-
-        /* Pure Clickable Entry Header Zone matching your image layout */
         header { 
             display: flex; 
             justify-content: center; 
             align-items: center; 
             padding: 30px 40px; 
-            background: rgba(0, 0, 0, 0.45); /* Subtle dark overlay for readability */
-            backdrop-filter: blur(3px); /* Elegant modern glassmorphism blur */
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(3px);
             border-bottom: 1px solid rgba(212, 175, 55, 0.15);
         }
-
         .nav-links { 
             list-style: none; 
             display: flex; 
-            gap: 45px; /* Perfect spacing between clickable options */
+            gap: 45px; 
             padding: 0; 
             margin: 0; 
         }
-
-        /* Navigation text matches the precise gold tinting rules */
         .nav-links a { 
             color: #d4af37; 
             text-decoration: none; 
@@ -48,17 +42,14 @@
             transition: all 0.3s ease;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
         }
-
         .nav-links a:hover { 
             color: #ffffff; 
             text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
             transform: scale(1.05);
         }
-
-        /* Locks down the rest of the canvas so nothing else is clickable or selectable */
         .disabled-canvas-shield {
             position: absolute;
-            top: 100px; /* Sits completely below the header */
+            top: 100px;
             left: 0;
             width: 100%;
             height: calc(100vh - 100px);
