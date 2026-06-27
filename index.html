@@ -5,82 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome - Entry Portal</title>
     <style>
-        @font-face {
-            font-family: 'Le Jour Serif';
-            src: url('LeJourSerif.woff2') format('woff2'),
-                 url('LeJourSerif.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
-
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-        }
-        body { 
-            background: url('OpenPage.png') no-repeat center center fixed; 
-            background-size: cover; 
-            background-color: #121212; 
-            overflow: hidden;
-            font-family: 'Segoe UI', sans-serif; 
-        }
-        header { 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            padding: 25px 40px; 
-            background: rgba(0, 0, 0, 0.55); 
-            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-        }
-        .nav-links { 
-            list-style: none; 
-            display: flex; 
-            gap: 45px; 
-            padding: 0; 
-            margin: 0; 
-        }
-        .nav-links a { 
-            color: #d4af37; 
-            text-decoration: none; 
-            font-weight: bold; 
-            font-family: 'Le Jour Serif', 'Georgia', serif;
-            font-size: 20px; 
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
-        }
-        .nav-links a:hover { 
-            color: #ffffff; 
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
-        }
-        .disabled-canvas-shield {
-            position: absolute;
-            top: 100px;
-            left: 0;
-            width: 100%;
-            height: calc(100vh - 100px);
-            pointer-events: none;
-            user-select: none;
-        }
+        @font-face { font-family: 'Le Jour Serif'; src: url('LeJourSerif.woff2') format('woff2'), url('LeJourSerif.woff') format('woff'); font-weight: normal; font-style: normal; font-display: swap; }
+        html, body { margin: 0; padding: 0; width: 100%; height: 100%; }
+        body { background: url('OpenPage.png') no-repeat center center fixed; background-size: cover; background-color: #121212; overflow: hidden; font-family: 'Segoe UI', sans-serif; }
+        header { display: flex; justify-content: center; align-items: center; padding: 25px 40px; background: rgba(0, 0, 0, 0.55); border-bottom: 1px solid rgba(212, 175, 55, 0.15); }
+        .nav-links { list-style: none; display: flex; gap: 35px; padding: 0; margin: 0; }
+        .nav-links a { color: #d4af37; text-decoration: none; font-weight: bold; font-family: 'Le Jour Serif', 'Georgia', serif; font-size: 18px; letter-spacing: 1px; transition: all 0.3s ease; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9); }
+        .nav-links a:hover { color: #ffffff; text-shadow: 0 0 10px rgba(212, 175, 55, 0.7); }
+        .disabled-canvas-shield { position: absolute; top: 100px; left: 0; width: 100%; height: calc(100vh - 100px); pointer-events: none; user-select: none; }
+        .back-btn-container { text-align: center; margin-top: 30px; }
+        .back-home-btn { display: inline-block; font-family: 'Le Jour Serif', serif; color: #d4af37; text-decoration: none; font-size: 1rem; border: 1px solid #d4af37; padding: 6px 16px; border-radius: 4px; transition: all 0.3s; background: rgba(0,0,0,0.4); }
+        .back-home-btn:hover { color: #fff; border-color: #fff; }
     </style>
 </head>
 <body>
-
     <header>
         <nav>
             <ul class="nav-links">
-                <!-- Routes directly to your specific menu profile page -->
                 <li><a href="menu.html">Home</a></li>
-                <li><a href="About.html">About us</a></li>
-                <li><a href="Service.html">Service</a></li>
+                <li><a href="hub.html">Menu</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Service.html">Services</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-
+    <div class="back-btn-container"><a href="menu.html" class="back-home-btn">← Back to Home</a></div>
     <div class="disabled-canvas-shield"></div>
-
 </body>
 </html>
