@@ -5,104 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services</title>
     <style>
-        @font-face {
-            font-family: 'Le Jour Serif';
-            src: url('LeJourSerif.woff2') format('woff2'),
-                 url('LeJourSerif.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }
-
-        body { 
-            margin: 0; 
-            padding: 0; 
-            background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), url('Background.png'); 
-            background-size: cover; 
-            background-position: center; 
-            background-attachment: fixed; 
-            background-repeat: no-repeat;
-            color: #f5f5f5; 
-            font-family: 'Segoe UI', sans-serif; 
-        }
+        @font-face { font-family: 'Le Jour Serif'; src: url('LeJourSerif.woff2') format('woff2'), url('LeJourSerif.woff') format('woff'); font-weight: normal; font-style: normal; font-display: swap; }
+        body { margin: 0; padding: 0; background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), url('Background.png'); background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat; color: #f5f5f5; font-family: 'Segoe UI', sans-serif; }
         header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: rgba(0,0,0,0.85); border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
-        .nav-links { list-style: none; display: flex; gap: 30px; padding: 0; margin: 0; }
-        .nav-links a { color: #d4af37; text-decoration: none; font-weight: bold; font-size: 18px; }
-        .nav-links a:hover { color: #ffffff; border-bottom: 2px solid #d4af37; }
-        
-        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; text-align: center; }
-        
-        h1 { 
-            font-family: 'Le Jour Serif', 'Georgia', serif;
-            color: #d4af37; 
-            font-size: 2.5rem; 
-            margin-bottom: 50px; 
-            letter-spacing: 2px; 
-        }
-        
-        /* Containers are completely transparent with no backgrounds or yellow borders */
-        .service-card { 
-            background: transparent; 
-            border: none; 
-            padding: 20px 0; 
-            text-align: left; 
-            margin-bottom: 40px; 
-        }
-        
-        .service-title { 
-            font-family: 'Le Jour Serif', 'Georgia', serif;
-            font-size: 1.5rem; 
-            color: #d4af37; 
-            font-weight: bold; 
-            margin-bottom: 12px; 
-            letter-spacing: 0.5px;
-        }
-        .service-desc { 
-            color: #cccccc; 
-            line-height: 1.7; 
-            font-size: 1.1rem; 
-        }
-        
-        .cta-container { text-align: center; margin-top: 50px; }
-        .cta-btn { display: inline-block; background: transparent; color: #d4af37; border: 2px solid #d4af37; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
-        .cta-btn:hover { background: #d4af37; color: #121212; transform: translateY(-3px); }
+        .nav-links { list-style: none; display: flex; gap: 25px; padding: 0; margin: 0; }
+        .nav-links a { color: #d4af37; text-decoration: none; font-weight: bold; font-size: 16px; font-family: 'Le Jour Serif', serif; }
+        .nav-links a:hover { color: #fff; }
+        .container { max-width: 900px; margin: 0 auto; padding: 50px 20px; text-align: center; }
+        h1 { font-family: 'Le Jour Serif', 'Georgia', serif; color: #d4af37; font-size: 2.5rem; margin-bottom: 40px; letter-spacing: 2px; }
+        .service-card { background: transparent; border: none; padding: 20px 0; text-align: left; margin-bottom: 35px; }
+        .service-title { font-family: 'Le Jour Serif', 'Georgia', serif; font-size: 1.5rem; color: #d4af37; font-weight: bold; margin-bottom: 12px; letter-spacing: 0.5px; }
+        .service-desc { color: #cccccc; line-height: 1.7; font-size: 1.1rem; }
+        .back-home-btn { display: inline-block; font-family: 'Le Jour Serif', serif; color: #d4af37; text-decoration: none; font-size: 1rem; border: 1px solid #d4af37; padding: 6px 16px; border-radius: 4px; transition: all 0.3s; background: rgba(0,0,0,0.4); }
+        .back-home-btn:hover { color: #fff; border-color: #fff; }
     </style>
 </head>
 <body>
-
-   <header>
+    <header>
         <div class="logo-container"><img src="logo.png" alt="Logo" style="height: 50px;"></div>
         <nav>
             <ul class="nav-links">
-                <li><a href="hub.html">Home</a></li>
-                <li><a href="About.html">About us</a></li>
-                <li><a href="Contact.html">Contact us</a></li>
+                <li><a href="menu.html">Home</a></li>
+                <li><a href="hub.html">Menu</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Service.html" style="color:#fff;">Services</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-
     <main class="container">
         <h1>PROFESSIONAL ARCHITECTURE SERVICES</h1>
-        
         <div class="service-card">
             <div class="service-title">Data Alchemy & Business Intelligence</div>
             <div class="service-desc">Turning messy, unorganized company data logs into crystal-clear executive roadmaps. Using advanced SQL querying, Python modeling, and dynamic Power BI dashboards, I translate confusing back-end numbers into clear business metrics that humans actually enjoy reading.</div>
         </div>
-
         <div class="service-card">
             <div class="service-title">Cloud Architecture & Workflow Automation</div>
             <div class="service-desc">Building digital bridges that eliminate manual tech headaches. I design secure, automated cloud environments and smart API endpoints inside Microsoft Azure and Intune, ensuring your system operations run smoothly behind the scenes without needing constant supervision.</div>
         </div>
-
         <div class="service-card">
             <div class="service-title">High-Velocity Operations & System Scaling</div>
             <div class="service-desc">Applying engineering precision to chaotic real-world supply lines. Drawing from years of leading fast-paced restaurant operations under immense rush pressure, I optimize workflow capacity, eliminate inventory waste, and build robust processes that help businesses scale safely.</div>
         </div>
-
-        <div class="cta-container">
-            <a href="index.html" class="cta-btn">Return to Main</a>
-        </div>
+        <a href="menu.html" class="back-home-btn">← Back to Home</a>
     </main>
-
 </body>
 </html>
