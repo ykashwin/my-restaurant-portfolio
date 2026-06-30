@@ -32,7 +32,6 @@
         
         .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; text-align: center; }
         
-        /* Typography Updates */
         h1 { 
             font-family: 'Le Jour Serif', 'Georgia', serif;
             color: #d4af37; 
@@ -49,7 +48,16 @@
         }
         
         .establishment-tag { color: #888; font-style: italic; font-size: 1.1rem; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 3px; }
-        .edu-card { background: rgba(28, 28, 28, 0.9); border: 1px solid #d4af37; padding: 30px; border-radius: 8px; text-align: left; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        
+        /* Containers are completely transparent with no gray backgrounds or borders */
+        .edu-card { 
+            background: transparent; 
+            border: none; 
+            padding: 20px 0; 
+            text-align: left; 
+            margin-bottom: 40px; 
+        }
+        
         .edu-institution { font-size: 1.1rem; color: #d4af37; margin: 5px 0 15px 0; }
         .edu-desc { color: #cccccc; line-height: 1.6; font-size: 1.05rem; }
         
@@ -60,6 +68,7 @@
         .cta-container { text-align: center; margin-top: 50px; }
         .cta-btn { display: inline-block; background: transparent; color: #d4af37; border: 2px solid #d4af37; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
         .cta-btn:hover { background: #d4af37; color: #121212; transform: translateY(-3px); }
+        
         .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); justify-content: center; align-items: center; z-index: 1000; }
         .modal-box { background: #1c1c1c; border: 2px solid #d4af37; border-radius: 8px; width: 90%; max-width: 1100px; padding: 30px; position: relative; }
         .close-modal { position: absolute; top: 15px; right: 20px; color: #d4af37; font-size: 30px; cursor: pointer; font-weight: bold; }
@@ -106,7 +115,6 @@
         <h1>THE OFFICE: ACADEMIA & CREDENTIALS</h1>
         <div class="establishment-tag">Elite</div>
         
-        <!-- MSc Block -->
         <div class="edu-card">
             <div class="edu-title">Master of Science in Business Analytics</div>
             <div class="edu-institution">University of Exeter</div>
@@ -118,7 +126,6 @@
             </div>
         </div>
 
-        <!-- BTech Block -->
         <div class="edu-card">
             <div class="edu-title">Bachelor of Technology in Information Technology</div>
             <div class="edu-institution">Swami Vivekananda Institute of Technology {Affiliated to JNTU, Hyderabad}</div>
@@ -130,7 +137,6 @@
             </div>
         </div>
 
-        <!-- School Block -->
         <div class="edu-card">
             <div class="edu-title">Foundational & Pre-University Registries</div>
             <div class="edu-institution">Secondary & Intermediate Certification Archives</div>
