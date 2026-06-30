@@ -52,8 +52,11 @@
         .edu-card { background: rgba(28, 28, 28, 0.9); border: 1px solid #d4af37; padding: 30px; border-radius: 8px; text-align: left; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
         .edu-institution { font-size: 1.1rem; color: #d4af37; margin: 5px 0 15px 0; }
         .edu-desc { color: #cccccc; line-height: 1.6; font-size: 1.05rem; }
-        .cert-link { display: inline-block; margin-top: 15px; color: #d4af37; text-decoration: none; font-weight: bold; cursor: pointer; }
+        
+        .link-group { display: flex; flex-direction: column; gap: 8px; margin-top: 15px; }
+        .cert-link { color: #d4af37; text-decoration: none; font-weight: bold; cursor: pointer; display: inline-block; width: max-content; }
         .cert-link:hover { text-decoration: underline; color: #ffffff; }
+        
         .cta-container { text-align: center; margin-top: 50px; }
         .cta-btn { display: inline-block; background: transparent; color: #d4af37; border: 2px solid #d4af37; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
         .cta-btn:hover { background: #d4af37; color: #121212; transform: translateY(-3px); }
@@ -103,22 +106,31 @@
         <h1>THE OFFICE: ACADEMIA & CREDENTIALS</h1>
         <div class="establishment-tag">Elite</div>
         
+        <!-- MSc Block -->
         <div class="edu-card">
             <div class="edu-title">Master of Science in Business Analytics</div>
             <div class="edu-institution">University of Exeter</div>
             <p class="edu-desc">Advanced postgraduate specialization focusing on data-driven decision making, predictive modeling, and business intelligence architectures to transform complex data infrastructure into operational strategy.</p>
             <a href="#" onclick="toggleModal(true); return false;" class="cert-link">Published research: “Strategies for Pharmaceutical Resilience” (Edward Elgar Publishing Ltd)</a>
-            <br>
-            <a href="#" onclick="accessProtectedAsset('Exeter_Certificate.pdf'); return false;" class="cert-link" style="color: #a5c7eb; margin-top: 8px;">🔒 View MSc Exeter Verified Degree Certificate (Protected)</a>
+            <div class="link-group">
+                <a href="#" onclick="accessProtectedAsset('Exeter_Certificate.pdf'); return false;" class="cert-link" style="color: #a5c7eb;">🔒 View MSc Exeter Verified Degree Certificate (Protected)</a>
+                <a href="#" onclick="accessProtectedAsset('Recommendation(Exeter).pdf'); return false;" class="cert-link" style="color: #a5c7eb;">🔒 View University of Exeter Recommendation Letter (Protected)</a>
+            </div>
         </div>
 
+        <!-- BTech Block -->
         <div class="edu-card">
             <div class="edu-title">Bachelor of Technology in Information Technology</div>
             <div class="edu-institution">Swami Vivekananda Institute of Technology {Affiliated to JNTU, Hyderabad}</div>
             <p class="edu-desc">Core foundational engineering degree covering systems architecture, database management, cloud computing concepts, and algorithmic problem-solving.</p>
-            <a href="#" onclick="accessProtectedAsset('BTech.pdf'); return false;" class="cert-link" style="color: #a5c7eb;">🔒 View BTech Verified Degree Certificate (Protected)</a>
+            <div class="link-group">
+                <a href="#" onclick="accessProtectedAsset('BTech.pdf'); return false;" class="cert-link" style="color: #a5c7eb;">🔒 View BTech Verified Degree Certificate (Protected)</a>
+                <a href="#" onclick="accessProtectedAsset('Recommendation(SVIT)_1.pdf'); return false;" class="cert-link" style="color: #a5c7eb;">🔒 View SVIT Recommendation Letter 1 (Protected)</a>
+                <a href="#" onclick="accessProtectedAsset('Recommendation(SVIT)_2.pdf'); return false;" class="cert-link" style="color: #a5c7eb;">🔒 View SVIT Recommendation Letter 2 (Protected)</a>
+            </div>
         </div>
 
+        <!-- School Block -->
         <div class="edu-card">
             <div class="edu-title">Foundational & Pre-University Registries</div>
             <div class="edu-institution">Secondary & Intermediate Certification Archives</div>
