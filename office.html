@@ -32,13 +32,41 @@
         
         .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; text-align: center; }
         
+        /* Heading Row Integration Layout Elements */
+        .heading-wrapper {
+            display: table;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .heading-left-asset {
+            display: table-cell;
+            width: 120px;
+            vertical-align: middle;
+            text-align: left;
+            padding-right: 25px;
+        }
+        .heading-left-asset img {
+            width: 110px;
+            height: auto;
+            border-radius: 6px;
+            display: block;
+        }
+        .heading-right-content {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: left;
+        }
+        
         h1 { 
             font-family: 'Le Jour Serif', 'Georgia', serif;
             color: #d4af37; 
             font-size: 2.5rem; 
-            margin-bottom: 10px; 
+            margin: 0 0 5px 0; 
             letter-spacing: 2px; 
+            line-height: 1.2;
         }
+        .establishment-tag { color: #888; font-style: italic; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 3px; margin: 0; }
+
         .edu-title { 
             font-family: 'Le Jour Serif', 'Georgia', serif;
             font-size: 1.4rem; 
@@ -46,8 +74,6 @@
             font-weight: bold; 
             margin: 0; 
         }
-        
-        .establishment-tag { color: #888; font-style: italic; font-size: 1.1rem; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 3px; }
         
         /* Containers are completely transparent with no gray backgrounds or borders */
         .edu-card { 
@@ -76,6 +102,12 @@
         .split-pane { flex: 1; background: #121212; border: 1px solid #333; border-radius: 6px; padding: 15px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; }
         .pane-img { max-width: 100%; max-height: 450px; object-fit: contain; border-radius: 4px; }
         .pane-caption { margin-top: 15px; color: #888; font-size: 0.9rem; text-transform: uppercase; }
+        
+        @media (max-width: 650px) {
+            .heading-wrapper, .heading-left-asset, .heading-right-content { display: block; text-align: center; width: 100%; }
+            .heading-left-asset { padding-right: 0; margin-bottom: 15px; }
+            .heading-left-asset img { margin: 0 auto; }
+        }
     </style>
     <script>
         function toggleModal(show) {
@@ -112,8 +144,15 @@
     </header>
 
     <main class="container">
-        <h1>THE OFFICE: ACADEMIA & CREDENTIALS</h1>
-        <div class="establishment-tag">Elite</div>
+        <div class="heading-wrapper">
+            <div class="heading-left-asset">
+                <img src="Office.jpg" alt="Office Academic Identity Asset">
+            </div>
+            <div class="heading-right-content">
+                <h1>THE OFFICE: ACADEMIA & CREDENTIALS</h1>
+                <div class="establishment-tag">Elite</div>
+            </div>
+        </div>
         
         <div class="edu-card">
             <div class="edu-title">Master of Science in Business Analytics</div>
