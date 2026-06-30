@@ -59,9 +59,11 @@
         .timeline { border-left: 2px solid #d4af37; padding-left: 20px; margin-left: 20px; }
         .timeline-item { margin-bottom: 40px; position: relative; }
         .timeline-item::before { content: ''; position: absolute; left: -27px; top: 5px; width: 12px; height: 12px; background: #d4af37; border-radius: 50%; }
-        .company-date { font-size: 1rem; color: #d4af37; margin: 5px 0 15px 0; font-style: italic; }
-        .job-desc { color: #cccccc; line-height: 1.6; font-size: 1.05rem; }
-        .secure-link { color: #d4af37; text-decoration: none; font-weight: bold; font-size: 0.95rem; display: inline-block; margin-top: 10px; }
+        .company-date { font-size: 1rem; color: #d4af37; margin: 5px 0 12px 0; font-style: italic; }
+        .job-desc { color: #cccccc; line-height: 1.6; font-size: 1.05rem; margin-bottom: 12px; }
+        
+        .link-group { display: flex; flex-direction: column; gap: 6px; }
+        .secure-link { color: #d4af37; text-decoration: none; font-weight: bold; font-size: 0.95rem; display: inline-block; width: max-content; }
         .secure-link:hover { text-decoration: underline; color: #fff; }
         
         .secure-vault-box { background: rgba(28, 28, 28, 0.9); border: 1px dashed #d4af37; padding: 25px; border-radius: 8px; text-align: center; margin: 50px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
@@ -107,42 +109,55 @@
         <h1>THE DINING: CORPORATE JOURNEY</h1>
         
         <div class="timeline">
-            <!-- Experience 1: Mindtree -->
+            <!-- Mindtree -->
             <div class="timeline-item">
                 <div class="job-title">Project Manager / Technical Leader</div>
                 <div class="company-date">Mindtree | February 2022 — September 2022</div>
                 <div class="job-desc">Spearheaded enterprise infrastructure modernization, successfully managing a high-impact Microsoft Intune implementation project. Aligned cross-functional tech teams to ensure secure, scalable endpoint deployment across the ecosystem.</div>
-                <a href="#" onclick="accessProtectedAsset('Mindtree_Offer.pdf'); return false;" class="secure-link">🔒 View Mindtree Documentation (Protected)</a>
+                <div class="link-group">
+                    <a href="#" onclick="accessProtectedAsset('Mindtree.pdf'); return false;" class="secure-link">🔒 Experience Certificate</a>
+                    <a href="#" onclick="accessProtectedAsset('Mindtree_Rec.pdf'); return false;" class="secure-link">🔒 Reference Letter</a>
+                </div>
             </div>
 
-            <!-- Experience 2: Deloitte -->
+            <!-- Deloitte -->
             <div class="timeline-item">
                 <div class="job-title">Senior Analyst — Technology Consulting</div>
                 <div class="company-date">Deloitte | October 2014 — February 2022</div>
                 <div class="job-desc">Architected enterprise modernization strategies and steered major cloud transformation initiatives. Partnered with corporate leadership to replace legacy friction with efficient, automated workflows and robust data governance frameworks.</div>
-                <a href="#" onclick="accessProtectedAsset('Deloitte_Experience.pdf'); return false;" class="secure-link">🔒 View Deloitte Documentation (Protected)</a>
+                <div class="link-group">
+                    <a href="#" onclick="accessProtectedAsset('Deloitte.pdf'); return false;" class="secure-link">🔒 Experience Certificate</a>
+                    <a href="#" onclick="accessProtectedAsset('Deloitte_Rec.pdf'); return false;" class="secure-link">🔒 Reference Letter</a>
+                </div>
             </div>
 
-            <!-- Experience 3: IBM -->
+            <!-- DELL -->
+            <div class="timeline-item">
+                <div class="job-title">Systems Senior Analyst</div>
+                <div class="company-date">DELL</div>
+                <div class="job-desc">Managed advanced system architecture diagnostics and backend operational capacity deployments. Streamlined infrastructure scaling protocols while aligning technical frameworks with strict corporate delivery standards.</div>
+                <div class="link-group">
+                    <a href="#" onclick="accessProtectedAsset('DELL.pdf'); return false;" class="secure-link">🔒 Experience Certificate</a>
+                    <!-- Reference Letter omitted intentionally per instruction -->
+                </div>
+            </div>
+
+            <!-- IBM -->
             <div class="timeline-item">
                 <div class="job-title">Technical Analyst / Cloud Solutions Engineer</div>
                 <div class="company-date">IBM Corporation</div>
                 <div class="job-desc">Contributed to high-level technical analysis, delivery management, and systems engineering frameworks. Specialized in deploying business analytics processes and maintaining cross-functional team execution standards.</div>
-                <a href="#" onclick="accessProtectedAsset('IBM_Certificate.pdf'); return false;" class="secure-link">🔒 View IBM Verification Certificate (Protected)</a>
-            </div>
-
-            <!-- Experience 4: Additional Corporate Records -->
-            <div class="timeline-item">
-                <div class="job-title">Technical Support & Operations Leader</div>
-                <div class="company-date">Corporate Engineering Records</div>
-                <div class="job-desc">Managed high-volume client interaction networks, engineered low-friction technical solutions, and oversaw platform performance monitoring frameworks.</div>
-                <a href="#" onclick="accessProtectedAsset('Corporate_Records.pdf'); return false;" class="secure-link">🔒 View Additional Career Credentials (Protected)</a>
+                <div class="link-group">
+                    <a href="#" onclick="accessProtectedAsset('IBM.pdf'); return false;" class="secure-link">🔒 Experience Certificate</a>
+                    <a href="#" onclick="accessProtectedAsset('IBM_Rec.pdf'); return false;" class="secure-link">🔒 Reference Letter</a>
+                    <a href="#" onclick="accessProtectedAsset('IBM_Rec2.pdf'); return false;" class="secure-link">🔒 Reference Letter 2</a>
+                </div>
             </div>
         </div>
 
         <div class="secure-vault-box">
             <div class="vault-title">🔒 SECURE VERIFIED CORPORATE EXPERIENCES</div>
-            <a onclick="accessProtectedAsset('Mindtree_Reliving.pdf')" class="vault-btn">Open Comprehensive Protected PDF Portfolio</a>
+            <a onclick="accessProtectedAsset('Mindtree.pdf')" class="vault-btn">Open Comprehensive Protected PDF Portfolio</a>
             <div class="vault-note">This folder is encrypted to protect private client information. Please input your assigned portfolio key when prompted.</div>
         </div>
 
