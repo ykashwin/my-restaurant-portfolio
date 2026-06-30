@@ -32,7 +32,6 @@
         
         .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; text-align: center; }
         
-        /* Heading Row Integration Layout Elements */
         .heading-wrapper {
             display: table;
             width: 100%;
@@ -75,7 +74,6 @@
             margin: 0; 
         }
         
-        /* Containers are completely transparent with no gray backgrounds or borders */
         .edu-card { 
             background: transparent; 
             border: none; 
@@ -95,14 +93,43 @@
         .cta-btn { display: inline-block; background: transparent; color: #d4af37; border: 2px solid #d4af37; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; }
         .cta-btn:hover { background: #d4af37; color: #121212; transform: translateY(-3px); }
         
-        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); justify-content: center; align-items: center; z-index: 1000; }
-        .modal-box { background: #1c1c1c; border: 2px solid #d4af37; border-radius: 8px; width: 90%; max-width: 1100px; padding: 30px; position: relative; }
-        .close-modal { position: absolute; top: 15px; right: 20px; color: #d4af37; font-size: 30px; cursor: pointer; font-weight: bold; }
-        .split-view-container { display: flex; gap: 30px; justify-content: center; align-items: stretch; margin-top: 20px; }
-        .split-pane { flex: 1; background: #121212; border: 1px solid #333; border-radius: 6px; padding: 15px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; }
-        .pane-img { max-width: 100%; max-height: 450px; object-fit: contain; border-radius: 4px; }
-        .pane-caption { margin-top: 15px; color: #888; font-size: 0.9rem; text-transform: uppercase; }
+        /* Modal setup customized to use Exeter.jpg directly as its immersive container background */
+        .modal-overlay { 
+            display: none; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)), url('Exeter.jpg') no-repeat center center; 
+            background-size: cover;
+            justify-content: center; 
+            align-items: center; 
+            z-index: 1000; 
+        }
+        /* Modal box container set to completely transparent background */
+        .modal-box { 
+            background: transparent; 
+            border: none;
+            width: 90%; 
+            max-width: 1100px; 
+            padding: 30px; 
+            position: relative; 
+        }
+        .close-modal { position: absolute; top: -5px; right: 5px; color: #d4af37; font-size: 40px; cursor: pointer; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+        .close-modal:hover { color: #ffffff; }
         
+        .split-view-container { display: flex; gap: 30px; justify-content: center; align-items: stretch; margin-top: 20px; }
+        .split-pane { flex: 1; background: rgba(18, 18, 18, 0.85); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 8px; padding: 25px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 10px 30px rgba(0,0,0,0.6); backdrop-filter: blur(4px); }
+        .split-pane:hover { border-color: #d4af37; transform: translateY(-2px); transition: all 0.2s ease; }
+        .pane-img { max-width: 100%; max-height: 450px; object-fit: contain; border-radius: 4px; }
+        .pane-caption { margin-top: 15px; color: #888; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; }
+        .split-pane:hover .pane-caption { color: #d4af37; }
+
+        @media (max-width: 850px) {
+            .split-view-container { flex-direction: column; gap: 20px; }
+            .modal-overlay { overflow-y: auto; align-items: flex-start; padding: 40px 0; }
+        }
         @media (max-width: 650px) {
             .heading-wrapper, .heading-left-asset, .heading-right-content { display: block; text-align: center; width: 100%; }
             .heading-left-asset { padding-right: 0; margin-bottom: 15px; }
@@ -154,6 +181,7 @@
             </div>
         </div>
         
+        <!-- MSc Block -->
         <div class="edu-card">
             <div class="edu-title">Master of Science in Business Analytics</div>
             <div class="edu-institution">University of Exeter</div>
@@ -165,6 +193,7 @@
             </div>
         </div>
 
+        <!-- BTech Block -->
         <div class="edu-card">
             <div class="edu-title">Bachelor of Technology in Information Technology</div>
             <div class="edu-institution">Swami Vivekananda Institute of Technology {Affiliated to JNTU, Hyderabad}</div>
@@ -176,6 +205,7 @@
             </div>
         </div>
 
+        <!-- School Block -->
         <div class="edu-card">
             <div class="edu-title">Foundational & Pre-University Registries</div>
             <div class="edu-institution">Secondary & Intermediate Certification Archives</div>
